@@ -1,0 +1,47 @@
+h1 {
+    color: #87CEEB;
+    text-align: center;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+table {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: rgb(244, 183, 183);
+    border: 2px solid rgb(57, 199, 247);
+    border-radius: 10px; /* Rounded corners */
+    width: 100%;
+    border-collapse: collapse;
+}
+
+caption {
+    font-style: italic;
+    color: #6bc6ea;
+    font-size: 13px;
+    text-align: center;
+}
+
+th, td {
+    border: 2px solid rgb(167, 173, 174);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: rgb(88, 187, 220);
+    color: white; /* Optional: Change the text color of the table header */
+}
+
+tr:hover {
+    background-color: #f36e6e; /* Optional: Highlight the table row on hover */
+}
+
+@media screen and (max-width: 600px) {
+    table {
+        overflow-x: auto;
+    }
+}
