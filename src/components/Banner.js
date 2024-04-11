@@ -1,9 +1,12 @@
+import React from 'react';
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/coding-girl.svg";
 import { PersonCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { HashLink } from 'react-router-hash-link';
+import { useHistory } from 'react-router-dom';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -13,6 +16,7 @@ export const Banner = () => {
   const [index, setIndex] = useState(1);
   const toRotate = [ "Developer", "Student" ];
   const period = 2000;
+  
 
   useEffect(() => {
     let ticker = setInterval(() => {
@@ -56,7 +60,7 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">你好! Hello! Привет!</span>
-                <h1>{`This is Yichi, a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Developer", "Student" ]'><span className="wrap">{text}</span></span></h1>
+                <h1>{`I'm Yichi, a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Developer", "Student" ]'><span className="wrap">{text}</span></span></h1>
                   <p>I'm currently pursuing a Master of Computing at ANU with a passion for becoming a full-stack engineer. Eager to leverage my education and skills to contribute to innovative software solutions, I thrive on exploring new technologies and tackling complex challenges.</p>
                   <button onClick={() => console.log('connect')}>Know more about me <PersonCircle size={25} /></button>
               </div>}
@@ -65,7 +69,7 @@ export const Banner = () => {
           <Col xs={12} md={6} xl={5}>
             <TrackVisibility>
               {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
+                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <img src={headerImg} alt="Header Img"/>
                 </div>}
             </TrackVisibility>

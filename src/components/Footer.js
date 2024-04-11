@@ -53,7 +53,8 @@ export const Footer = () => {
       <Container>
         <Row className="align-items-center">
           <Col size={12} sm={6}>
-            <HandThumbsUpFill size={40} color={liked ? 'deeppink' : undefined} onClick={handleLike} /> 
+            <p className='click-like'>Click Like</p>
+          <HandThumbsUpFill size={30} color={liked ? '#4169E1' : undefined} onClick={handleLike} className='hand-thumbs-up'/> 
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">

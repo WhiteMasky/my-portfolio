@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { Map } from 'react-bootstrap-icons';
+import { Map, Compass } from 'react-bootstrap-icons';
 import navIconLinkedIn from '../assets/img/nav-icon-linkedin.svg';
 import navIconGithub from '../assets/img/nav-icon-github.svg';
 import navIconDiscord from '../assets/img/nav-icon-discord.svg';
@@ -38,7 +38,7 @@ export const NavBar = () => {
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="./sitemap.html">
-            <Map size={50} className="map-icon"/>
+            <Compass size={50} className="map-icon"/>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>

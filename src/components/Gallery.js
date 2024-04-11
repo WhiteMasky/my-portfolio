@@ -18,7 +18,6 @@ import colorSharp from "../assets/img/flowers.png"
 export const Gallery = () => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5
     },
@@ -47,7 +46,17 @@ export const Gallery = () => {
                           <br>
                           </br>
                           - Arthur Schopenhauer, The Wisdom of Life</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme image-slider">
+                        <Carousel 
+                        responsive={responsive} 
+                        infinite={true}  
+                        swipeable={true} 
+                        draggable={true} 
+                        centerMode={true} 
+                        autoPlay={true}
+                        autoPlaySpeed={3000}
+                        showDots={true}
+                        renderDotsOutside={true}
+                        className="owl-carousel owl-theme image-slider">
                             <div className="item">
                                 <img src={photo1} alt="Image" />
                                 <h5>Hangzhou, CN</h5>

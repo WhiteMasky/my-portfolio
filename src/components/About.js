@@ -1,74 +1,33 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/header-img.svg";
-import { ArrowRightCircle } from 'react-bootstrap-icons';
+import { ArrowRightCircle,ChatRightQuote,ChatLeftText } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
 export const About = () => {
-  const [loopNum, setLoopNum] = useState(0);
-  const [isDeleting, setIsDeleting] = useState(false);
-  const [text, setText] = useState('');
-  const [delta, setDelta] = useState(300 - Math.random() * 100);
-  const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
-  const period = 2000;
-
-  useEffect(() => {
-    let ticker = setInterval(() => {
-      tick();
-    }, delta);
-
-    return () => { clearInterval(ticker) };
-  }, [text])
-
-  const tick = () => {
-    let i = loopNum % toRotate.length;
-    let fullText = toRotate[i];
-    let updatedText = isDeleting ? fullText.substring(0, text.length - 1) : fullText.substring(0, text.length + 1);
-
-    setText(updatedText);
-
-    if (isDeleting) {
-      setDelta(prevDelta => prevDelta / 2);
-    }
-
-    if (!isDeleting && updatedText === fullText) {
-      setIsDeleting(true);
-      setIndex(prevIndex => prevIndex - 1);
-      setDelta(period);
-    } else if (isDeleting && updatedText === '') {
-      setIsDeleting(false);
-      setLoopNum(loopNum + 1);
-      setIndex(1);
-      setDelta(500);
-    } else {
-      setIndex(prevIndex => prevIndex + 1);
-    }
-  }
 
   return (
     <section className="about" id="about">
       <Container>
         <Row className="aligh-items-center">
-          <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
-                <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Judy`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                  <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button>
-              </div>}
-            </TrackVisibility>
+          <Col xs={12} md={6} xl={6}>
+            <p> Hello, this is <strong>Yichi Zhang</strong>, and I am currently pursuing a master's degree in computer science at the ANU. I am originally from China, where I spent the first 23 years of my life and earned my undergraduate degree. <br />
+              An interesting fact is that my undergraduate degree is unrelated to the STEM field; in fact, I majored in Russian literature. This is also why I can speak Chinese, English, and Russian.<br />
+              Switching my academic focus to computer science has been one of the boldest and most correct decisions I have made. I thoroughly enjoy coding, and problem-solving always excites me. <br />
+              Apart from my studies, I have other interests, such as calligraphy, a traditional Chinese handwriting art that I have been practicing for over fifteen years. Since coming to Australia, I have also developed a love for sports. I now go to the gym four to five times a week, and at the same time, I have learned sports like frisbee and tennis.
+            </p>
+            <button ><ChatRightQuote size={25} className="about-icon"/><p><strong> About Me </strong></p></button>
           </Col>
-          <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
-              {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__zoomIn" : ""}>
-                  <img src={headerImg} alt="Header Img"/>
-                </div>}
-            </TrackVisibility>
+          <Col xs={12} md={6} xl={6}>
+            <p> For any job seeker, especially those seeking development roles, a personal portfolio website is an excellent way to showcase one's technical skills and experiences. Creating a personal website is not a highly challenging task, but it holds significant practical value. <br />
+              <strong>Yichi's Portfolio</strong> developed by myself giving a brief introduction about me and my work to any recruiter who is looking for software developer to join his team. <br />
+              It's hard for me to name this site over other portfolio sites because everyone's portfolio is unique. However, at the very least, this website adopts bold design and clear structure, presenting myself in what I believe is the best way.<br />
+              <strong>List of goals:</strong><br />
+              - 1. Clearly present me and my related work<br />
+              - 2. Can be used as an electronic resume for job hunting<br />
+              - 3. Try to make it impressive</p>
+            <button onClick={() => console.log('connect')}><ChatLeftText size={25} className="about-icon"/><p><strong> Mission Statement </strong></p></button>
           </Col>
         </Row>
       </Container>

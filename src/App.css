@@ -308,9 +308,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border-right: 0.08em solid #666;
 }
 
-/************ Skills Css ************/
+/************ About Css ************/
+.about {
+  padding: 80px 0;
+  position: relative;
+  background: linear-gradient(120.21deg, #B0C4DE -5.91%, #6495ED 111.58%);
+}
+.about p {
+  color: #333333;
+  font-size: 14px;
+  width: 80%;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 50px auto;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  width: 56%;
+}
+.about .about-icon {
+  color: #4169E1;
+}
+
+/************ Gallery Css ************/
 .gallery-image {
-  padding: 0 0 50px 0;
+  padding: 80px 0 50px 0;
   position: relative;
 }
 .gallery-image-bx {
@@ -325,7 +346,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	font-weight: 700;
 }
 .gallery-image p {
-    color: #B8B8B8;
+    color: #121212;
     font-size: 18px;
     letter-spacing: 0.8px;
     line-height: 1.5em;
@@ -339,6 +360,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .image-slider .item img {
   width: 50%;
   margin: 0 auto 15px auto;
+  border-radius: 20px;
 }
 
 /************ Projects Css ************/
@@ -549,8 +571,19 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
+.click-like {
+  margin-left: -450px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+.hand-thumbs-up {
+  margin-left: -450px;
+}
+.hand-thumbs-up:hover {
+  cursor: pointer; 
+}
 
-
+ 
 .App {
   text-align: center;
 }
