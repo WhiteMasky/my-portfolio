@@ -1,85 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Source Log</title>
-    <link rel="stylesheet" href="default.css">
-    <link rel="stylesheet" type="text/css" href="./styles/sourcelog.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Source Log of Yichi's Portfolio</title>
+    <link rel="stylesheet" href="./styles/sitemap.css">
 </head>
-
 <body>
+    <header>
+        <h1>Source Log of Yichi's Portfolio</h1>
+    </header>
+    <section>
+        <table id="logTable">
+            <thead>
+              <tr>
+                <th class="">Original</th>
+                <th class="">Type</th>
+                <th class="">How Altered or Justification</th>
+                <th class="">Notes</th>
+                <th class="">Action</th> <!-- Add Action column for delete button -->
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Row 1, Column 1</td>
+                <td>Row 1, Column 2</td>
+                <td>Row 1, Column 3</td>
+                <td>Row 1, Column 4</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td> <!-- Add delete button -->
+              </tr>
+              <tr>
+                <td>Row 2, Column 1</td>
+                <td>Row 2, Column 2</td>
+                <td>Row 2, Column 3</td>
+                <td>Row 2, Column 4</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td> <!-- Add delete button -->
+              </tr>
+              <tr>
+                <td>Row 3, Column 1</td>
+                <td>Row 3, Column 2</td>
+                <td>Row 3, Column 3</td>
+                <td>Row 3, Column 4</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td> <!-- Add delete button -->
+              </tr>
+              <!-- Add more rows as needed -->
+            </tbody>
+          </table>
+          <button onclick="showInputDialog()">Add Row</button> <!-- Add button to add new row -->
+    </section>
 
-    <h1>Sources Log</h1>
+    <script>
+        // Function to add a new row to the table
+        function addRow(data) {
+            var table = document.getElementById("logTable").getElementsByTagName('tbody')[0];
+            var newRow = table.insertRow();
+            for (var i = 0; i < data.length; i++) {
+                var cell = newRow.insertCell();
+                cell.innerHTML = data[i];
+            }
+            var actionCell = newRow.insertCell();
+            actionCell.innerHTML = '<button onclick="deleteRow(this)">Delete</button>'; // Add delete button
+        }
 
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Original</th>
-                <th>Type</th>
-                <th>How Altered or Justification</th>
-            </tr>
-        </thead>
-        <!-- 1 -->
-        <tbody>
-            <tr>
-                <!-- Link to the original URL -->
-                <td><a href="./images/logo.png" target="_blank"> Self drawed by Photoshop</a></td>
-                <!-- Type of image -->
-                <td>Graphic</td>
-                <!-- How the image was altered -->
-                <td>Original Image</td>
-            </tr>
-        </tbody>
-        <!-- 2 -->
-        <tbody>
-            <tr>
-                <!-- Link to the original URL -->
-                <td><a href="https://thenounproject.com/icon/woman-6692950/" target="_blank">Original Image Source</a></td>
-                <!-- Type of image -->
-                <td>Graphic</td>
-                <!-- How the image was altered -->
-                <td>Original Image</td>
-            </tr>
-        </tbody>
-        <!-- 3 -->
-        <tbody>
-            <tr>
-                <!-- Link to the original URL -->
-                <td><a href="https://www.freepik.com/free-vector/woman-working-new-app_10276620.htm#fromView=search&page=1&position=0&uuid=7f4c0089-9896-4bae-a0e0-754d3bcb0f4b" target="_blank">Original Image Source</a></td>
-                <!-- Type of image -->
-                <td>Graphic</td>
-                <!-- How the image was altered -->
-                <td>Original Image</td>
-            </tr>
-        </tbody>
-        <!-- 4 -->
-        <tbody>
-            <tr>
-                <!-- Link to the original URL -->
-                <td><a href="https://www.freepik.com/free-photo/mosque-pictures-moroccan-wall-pattern_1044221.htm#fromView=search&page=3&position=3&uuid=f80f62e2-75a3-413e-845b-8faf8870e798" target="_blank">Original Image Source</a></td>
-                <!-- Type of image -->
-                <td>Graphic</td>
-                <!-- How the image was altered -->
-                <td>Original Image</td>
-            </tr>
-        </tbody>
-        <!-- 5 -->
-        <tbody>
-            <tr>
-                <!-- Link to the original URL -->
-                <td><a href="./images/Bob.jpg" target="_blank">Screenshot of a self designed game</a></td>
-                <!-- Type of image -->
-                <td>Graphic</td>
-                <!-- How the image was altered -->
-                <td>Original Image</td>
-            </tr>
-        </tbody>
-        <!-- Caption for the table -->
-        <caption>Details of Image Sources and Alterations</caption>
-    </table>
+        // Function to delete a row from the table
+        function deleteRow(btn) {
+            var row = btn.parentNode.parentNode;
+            row.parentNode.removeChild(row);
+        }
 
+        // Function to show input dialog
+        function showInputDialog() {
+            var data = [];
+            for (var i = 0; i < 4; i++) {
+                var input = prompt("Enter data for column " + (i + 1) + ":");
+                data.push(input || "");
+            }
+            addRow(data);
+        }
+    </script>
 </body>
-
 </html>
