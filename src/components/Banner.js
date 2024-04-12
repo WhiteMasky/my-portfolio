@@ -2,7 +2,7 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/coding-girl.svg";
-import { PersonCircle } from 'react-bootstrap-icons';
+import { PersonCircle, ArrowDownCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 import { HashLink } from 'react-router-hash-link';
@@ -56,20 +56,20 @@ export const Banner = () => {
       <Container>
         <Row className="aligh-items-center">
           <Col xs={12} md={6} xl={7}>
-            <TrackVisibility>
+            <TrackVisibility offset={50}>
               {({ isVisible }) =>
-              <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+              <div className={isVisible ? "animate__animated animate__bounceInDown" : "animate__animated animate__flipOutX"}>
                 <span className="tagline">你好! Hello! Привет!</span>
                 <h1>{`I'm Yichi, a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Developer", "Student" ]'><span className="wrap">{text}</span></span></h1>
                   <p>I'm currently pursuing a Master of Computing at ANU with a passion for becoming a full-stack engineer. Eager to leverage my education and skills to contribute to innovative software solutions, I thrive on exploring new technologies and tackling complex challenges.</p>
-                  <button onClick={() => console.log('connect')}>Know more about me <PersonCircle size={25} /></button>
+                  <button onClick={() => console.log('connect')}>Know more about me <ArrowDownCircle size={25} /> Scroll down </button>
               </div>}
             </TrackVisibility>
           </Col>
           <Col xs={12} md={6} xl={5}>
-            <TrackVisibility>
+            <TrackVisibility offset={50}>
               {({ isVisible }) =>
-                <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
+                <div className={isVisible ? "animate__animated animate__swing" : "animate__animated animate__flipOutX"}>
                   <img src={headerImg} alt="Header Img"/>
                 </div>}
             </TrackVisibility>
