@@ -41,6 +41,7 @@ a {
 /* Remove underline on hover for links */
 a:hover {
   text-decoration: none; /* Remove underline */
+  color: #fff;
 }
 
 /* Ensure images are responsive */
@@ -176,7 +177,7 @@ footer {
 
 /* Styles for the input dialog */
 .input-dialog {
-  background-color: #f9f9f9; /* Set background color */
+  background-color: #B0C4DE; /* Set background color */
   border: 1px solid #ccc; /* Set border */
   padding: 20px; /* Add padding */
   border-radius: 5px; /* Add border radius */

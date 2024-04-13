@@ -3,7 +3,15 @@ function showInputDialog() {
     var data = [];
     // Loop to prompt user for input data for each column
     for (var i = 0; i < 4; i++) {
-        var input = prompt("Enter data for column " + (i + 1) + ":");
+        if (i === 0) {
+            var input = prompt("Enter origin of resource ");
+        } else if (i === 1) {
+            var input = prompt("Enter type of resource ");
+        } else if (i === 2) {
+            var input = prompt("Enter how altered or justification ");
+        } else {
+            var input = prompt("Enter addtional notes(fill it with 'N/A' if there is no addition) ");
+        }
         // Check if input is empty
         if (input.trim() === "") {
             alert("Cannot insert row with empty fields.");
