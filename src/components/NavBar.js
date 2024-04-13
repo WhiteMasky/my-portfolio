@@ -28,10 +28,16 @@ export const NavBar = () => {
 
     return () => window.removeEventListener("scroll", onScroll);
   }, [])
-
+  // The useEffect hook is used to add a scroll event listener to the window when the component mounts. 
+  // The callback function for this event listener checks if the vertical scroll position (window.scrollY) is greater than 80. 
+  // If it is, setScrolled is called with true, otherwise it's called with false. This could be used, for example, 
+  // to apply different styles to the navigation bar depending on whether the user has scrolled down the page or not. 
+  // The return function of the useEffect hook removes the event listener when the component unmounts.
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
   }
+  // The onUpdateActiveLink function is a helper function that updates the activeLink state with a new value. 
+  // This function is used in the onClick handlers of the Nav.Link components to update the activeLink state when a link is clicked.
 
   return (
     <Router>
@@ -42,6 +48,10 @@ export const NavBar = () => {
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
+            {/* The return statement of the component renders a Router component that wraps a Navbar component. 
+            The Navbar component has several child components, including a Navbar.Brand that contains a Compass component, 
+            a Navbar.Toggle for collapsing and expanding the navigation links on smaller screens, and a Navbar.Collapse 
+            that contains the navigation links themselves. */}
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
@@ -49,6 +59,10 @@ export const NavBar = () => {
               <Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About</Nav.Link>
               <Nav.Link href="#gallery" className={activeLink === 'gallery' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('gallery')}>Gallery</Nav.Link>
               <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
+              {/* The Navbar.Collapse contains a Nav component with several Nav.Link components. 
+              Each Nav.Link has an href prop that points to a section of the page, 
+              a className prop that applies different CSS classes depending on whether the link is the active link or not, 
+              and an onClick handler that calls onUpdateActiveLink with the corresponding section name when the link is clicked. */}
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
@@ -59,6 +73,8 @@ export const NavBar = () => {
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Contact Me Now</span></button>
+                {/* The Navbar.Collapse also contains a span with some social media icons 
+                and a HashLink component that points to the 'connect' section of the page.  */}
               </HashLink>
             </span>
           </Navbar.Collapse>

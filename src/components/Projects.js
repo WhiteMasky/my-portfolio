@@ -37,6 +37,9 @@ export const Projects = () => {
                 <h2>Projects</h2>
                 <p>Over the years, I have been involved in several projects and gained valuable experience through work, earning honors for my efforts along the way. <br />Here's a glimpse into my journey.</p>
                 <Tab.Container id="projects-tabs" defaultActiveKey="first">
+                {/* Inside this div, there's a Tab.Container component from react-bootstrap that holds a set of tabs. Each tab is represented by a Nav.Link inside a Nav.Item. 
+                The Nav.Link components have eventKey props that correspond to the eventKey props of the Tab.Pane components. 
+                This means that when a Nav.Link is clicked, the Tab.Pane with the matching eventKey is displayed. */}
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
                       <Nav.Link eventKey="first">Projects</Nav.Link>
@@ -49,6 +52,9 @@ export const Projects = () => {
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : "animate__animated animate__zoomOut"}>
+                {/* The first Tab.Pane contains a Row component that maps over the projects array and returns a ProjectCard component for each project. 
+                The ProjectCard component receives a key prop, which helps React identify which items have changed, are added, or are removed, 
+                and a spread project object, which passes the properties of the current project as props to the ProjectCard component. */}
                     <Tab.Pane eventKey="first">
                       <Row>
                         {

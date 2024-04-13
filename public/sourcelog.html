@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Source Log of Yichi's Portfolio</title>
-    <link rel="stylesheet" href="./styles/sitemap.css">
+    <link rel="stylesheet" href="./styles/sourcelog.css">
 </head>
 <body>
     <header>
@@ -15,11 +15,11 @@
         <table id="logTable">
             <thead>
               <tr>
-                <th class="">Original</th>
-                <th class="">Type</th>
-                <th class="">How Altered or Justification</th>
-                <th class="">Notes</th>
-                <th class="">Action</th> <!-- Add Action column for delete button -->
+                <th>Original</th>
+                <th>Type</th>
+                <th>How Altered or Justification</th>
+                <th>Notes</th>
+                <th>Action</th> <!-- Add Action column for delete button -->
               </tr>
             </thead>
             <tbody>
@@ -44,40 +44,62 @@
                 <td>Row 3, Column 4</td>
                 <td><button onclick="deleteRow(this)">Delete</button></td> <!-- Add delete button -->
               </tr>
+              <tr>
+                <td>Row 3, Column 1</td>
+                <td>Row 3, Column 2</td>
+                <td>Row 3, Column 3</td>
+                <td>Row 3, Column 4</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td> <!-- Add delete button -->
+              </tr>
+              <tr>
+                <td>Row 3, Column 1</td>
+                <td>Row 3, Column 2</td>
+                <td>Row 3, Column 3</td>
+                <td>Row 3, Column 4</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td> <!-- Add delete button -->
+              </tr>
+              <tr>
+                <td>Row 3, Column 1</td>
+                <td>Row 3, Column 2</td>
+                <td>Row 3, Column 3</td>
+                <td>Row 3, Column 4</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td> <!-- Add delete button -->
+              </tr>
+              <tr>
+                <td>Row 3, Column 1</td>
+                <td>Row 3, Column 2</td>
+                <td>Row 3, Column 3</td>
+                <td>Row 3, Column 4</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td> <!-- Add delete button -->
+              </tr>
+              <tr>
+                <td>Row 3, Column 1</td>
+                <td>Row 3, Column 2</td>
+                <td>Row 3, Column 3</td>
+                <td>Row 3, Column 4</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td> <!-- Add delete button -->
+              </tr>
+              <tr>
+                <td>Row 3, Column 1</td>
+                <td>Row 3, Column 2</td>
+                <td>Row 3, Column 3</td>
+                <td>Row 3, Column 4</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td> <!-- Add delete button -->
+              </tr>
+              <tr>
+                <td>Row 3, Column 1</td>
+                <td>Row 3, Column 2</td>
+                <td>Row 3, Column 3</td>
+                <td>Row 3, Column 4</td>
+                <td><button onclick="deleteRow(this)">Delete</button></td> <!-- Add delete button -->
+              </tr>
               <!-- Add more rows as needed -->
             </tbody>
           </table>
-          <button onclick="showInputDialog()">Add Row</button> <!-- Add button to add new row -->
+          <button onclick="showInputDialog()" id="addButton">Add Row</button>
     </section>
 
-    <script>
-        // Function to add a new row to the table
-        function addRow(data) {
-            var table = document.getElementById("logTable").getElementsByTagName('tbody')[0];
-            var newRow = table.insertRow();
-            for (var i = 0; i < data.length; i++) {
-                var cell = newRow.insertCell();
-                cell.innerHTML = data[i];
-            }
-            var actionCell = newRow.insertCell();
-            actionCell.innerHTML = '<button onclick="deleteRow(this)">Delete</button>'; // Add delete button
-        }
+    <script src="./scripts/sourcelog.js"></script>
 
-        // Function to delete a row from the table
-        function deleteRow(btn) {
-            var row = btn.parentNode.parentNode;
-            row.parentNode.removeChild(row);
-        }
-
-        // Function to show input dialog
-        function showInputDialog() {
-            var data = [];
-            for (var i = 0; i < 4; i++) {
-                var input = prompt("Enter data for column " + (i + 1) + ":");
-                data.push(input || "");
-            }
-            addRow(data);
-        }
-    </script>
 </body>
 </html>

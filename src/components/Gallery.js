@@ -15,7 +15,6 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
-import colorSharp from "../assets/img/flowers.png"
 
 export const Gallery = () => {
     const responsive = {
@@ -36,6 +35,11 @@ export const Gallery = () => {
             items: 1
         }
     };
+    // The Gallery component is a functional React component that renders a responsive image carousel.
+    // At the start of the component, a responsive object is defined. 
+    // This object specifies how many items to show in the carousel based on the current screen size. 
+    // For example, on a super large desktop screen (between 3000 and 4000 pixels), it will show 5 items, 
+    // while on a mobile screen (up to 464 pixels), it will show only 1 item.
 
     return (
         <section className="gallery-image" id="gallery">
@@ -51,6 +55,10 @@ export const Gallery = () => {
                             <TrackVisibility>
                                 {({ isVisible }) =>
                                     <div className={isVisible ? "animate__animated animate__fadeIn" : "animate__animated animate__flipOutX"}>
+                                        {/* Inside this div, there is a Carousel component that renders the image carousel. 
+                                        The Carousel component receives several props, including the responsive object defined earlier, 
+                                        and several boolean props that control its behavior, such as infinite, swipeable, draggable, 
+                                        centerMode, and autoPlay. It also receives a className prop that applies some CSS classes to it. */}
                                         <Carousel
                                             responsive={responsive}
                                             infinite={true}
@@ -62,6 +70,10 @@ export const Gallery = () => {
                                             showDots={true}
                                             renderDotsOutside={true}
                                             className="owl-carousel owl-theme image-slider">
+                                                {/* Inside the Carousel component, there are several divs, each representing an item in the carousel. 
+                                                Each item contains an image and a heading. The images are sourced from variables photo1 through photo12, 
+                                                which are not defined in the provided code but are presumably imported from elsewhere. 
+                                                The alt attribute for each image is set to "Image", and the text content of the heading is a location name. */}
                                             <div className="item">
                                                 <img src={photo1} alt="Image" />
                                                 <h5>Hangzhou, CN</h5>
