@@ -27,7 +27,12 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0; /* Reset padding */
   line-height: normal; /* Reset line height */
 }
-
+h2 {
+  color: #4169E1; /* Set color */
+}
+h2:hover {
+  color: #6495ED; /* Set hovering color */
+}
 /* Reset margin, padding, and line-height for paragraphs, links, list items, and buttons */
 p, a, li, button, ul {
   margin: 0; /* Reset margin */

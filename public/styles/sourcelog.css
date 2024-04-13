@@ -35,7 +35,9 @@ p, a, li, button, ul {
   line-height: normal; /* Reset line height */
   text-decoration: none; /* Remove default text decoration */
 }
-
+a {
+  color: #4169E1; /* Set link color */
+}
 /* Remove underline on hover for links */
 a:hover {
   text-decoration: none; /* Remove underline */

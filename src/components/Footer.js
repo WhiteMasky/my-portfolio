@@ -23,8 +23,8 @@ export const Footer = () => {
           <Col size={12} sm={6}>
             <p className='click-like'>Click Like</p>
           <HandThumbsUpFill size={30} color={liked ? '#4169E1' : undefined} onClick={handleLike} className='hand-thumbs-up'/> 
-          The first section contains a paragraph with the text "Click Like" and a "Like" button represented by a HandThumbsUpFill icon. 
-          {/* The color of the icon changes to #4169E1 when liked is true (i.e., the button has been clicked), 
+          {/* The first section contains a paragraph with the text "Click Like" and a "Like" button represented by a HandThumbsUpFill icon. 
+          The color of the icon changes to #4169E1 when liked is true (i.e., the button has been clicked), 
           and is undefined otherwise. The handleLike function is attached to the onClick event of the icon, so it gets called when the icon is clicked. */}
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
