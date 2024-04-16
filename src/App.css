@@ -97,31 +97,33 @@ input:focus, textarea:focus, select:focus {
 
 /* Before entering the main content */
 .enter_title {
-  font-size: 30px;
-  font-weight: 700;
-  text-align: center;
-  margin-right: 50px;
-
+  font-size: 30px; /* Sets the font size to 30 pixels */
+  font-weight: 700; /* Sets the font weight to bold */
+  text-align: center; /* Centers the text horizontally */
+  margin-right: 50px; /* Sets the right margin to 50 pixels */
 }
+
 .enter_container {
-  display: flex;
-  justify-content: center; /* 在水平方向上居中 */
-  align-items: center; /* 在垂直方向上居中 */
-  height: 100vh; /* 设置容器高度为视口高度 */
+  background-image: url('./assets/img/flowers.png'); /* Sets the background image */
+  background-size: cover; /* Makes the background image cover the entire container */
+  background-position: center; /* Sets the background image position to center */
+  display: flex; /* Displays the container as a flex container */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  height: 100vh; /* Sets the height of the container to 100% of the viewport height */
 }
 
 .enter_button {
-  /* 添加一些额外的样式，使按钮看起来更大或者更明显 */
-  justify-content: center;
-  align-items: center;
-  margin-left: ;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  margin-left: ; /* Sets the left margin */
+  padding: 10px 20px; /* Sets the padding */
+  font-size: 16px; /* Sets the font size to 16 pixels */
+  background-color: #007bff; /* Sets the background color */
+  color: #fff; /* Sets the text color */
+  border: none; /* Removes the border */
+  border-radius: 5px; /* Sets the border radius */
+  cursor: pointer; /* Sets the cursor to a pointer */
 }
 
 

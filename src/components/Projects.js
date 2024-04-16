@@ -1,8 +1,8 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/project-bob.png";
+import projImg1 from "../assets/img/project-marrakech.png";
 import projImg2 from "../assets/img/project-bob.png";
-import projImg3 from "../assets/img/project-bob.png";
+import projImg3 from "../assets/img/project-portfolio.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
@@ -45,13 +45,13 @@ export const Projects = () => {
                 This means that when a Nav.Link is clicked, the Tab.Pane with the matching eventKey is displayed. */}
                   <Nav variant="pills" className="nav-pills mb-5 justify-content-center align-items-center" id="pills-tab">
                     <Nav.Item>
-                      <Nav.Link eventKey="first">Projects</Nav.Link>
+                      <Nav.Link eventKey="first">Projects (Source code on Github)</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="second">Work</Nav.Link>
+                      <Nav.Link eventKey="second">Work Experience</Nav.Link>
                     </Nav.Item>
                     <Nav.Item>
-                      <Nav.Link eventKey="third">Honors</Nav.Link>
+                      <Nav.Link eventKey="third">Honors and Awards</Nav.Link>
                     </Nav.Item>
                   </Nav>
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : "animate__animated animate__zoomOut"}>
