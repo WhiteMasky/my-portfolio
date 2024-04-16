@@ -95,6 +95,36 @@ input:focus, textarea:focus, select:focus {
   }
 }
 
+/* Before entering the main content */
+.enter_title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-right: 50px;
+
+}
+.enter_container {
+  display: flex;
+  justify-content: center; /* 在水平方向上居中 */
+  align-items: center; /* 在垂直方向上居中 */
+  height: 100vh; /* 设置容器高度为视口高度 */
+}
+
+.enter_button {
+  /* 添加一些额外的样式，使按钮看起来更大或者更明显 */
+  justify-content: center;
+  align-items: center;
+  margin-left: ;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+
 /* Styles for the navigation bar */
 nav.navbar {
   padding: 18px 0; /* Adds padding of 18px on the top and bottom */

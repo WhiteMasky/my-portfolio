@@ -16,7 +16,6 @@ import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
 
 function App() {
-
   const [showPage, setShowPage] = useState(false);
 
   const handleClick = () => {
@@ -25,12 +24,15 @@ function App() {
 
   return (
     <div>
-      <h1>Hi! <br />
-      Welcome to my world.</h1>
       {!showPage && (
-        <button onClick={handleClick}>Click here to know me more</button>
+        <div className='enter_container'>
+          <h1 className='enter_title'>Hi! Welcome to my world.👉</h1>
+          <div className="enter_container">
+          <button onClick={handleClick} className='enter_button'>EXPLORE</button>
+          </div>
+        </div>
       )}
-      {showPage &&
+      {showPage && (
         <div className="App">
           <NavBar />
           <Banner />
@@ -39,21 +41,10 @@ function App() {
           <Projects />
           <Contact />
           <Footer />
-        </div>}
+        </div>
+      )}
     </div>
   );
-
-  // return (
-  //   <div className="App">
-  //     <NavBar />
-  //     <Banner />
-  //     <About />
-  //     <Gallery />
-  //     <Projects />
-  //     <Contact />
-  //     <Footer />
-  //   </div>
-  // );
 }
 
 export default App;
