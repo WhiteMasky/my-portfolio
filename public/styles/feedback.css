@@ -1,0 +1,153 @@
+Reset default styles for all elements
+* {
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    box-sizing: border-box; /* Ensure box model includes padding and border */
+  }
+  
+  /* Styles for smooth scrolling behavior */
+  html {
+    scroll-behavior: smooth; /* Enable smooth scrolling */
+    scroll-padding-top: 75px; /* Add padding when scrolling */
+  }
+  
+  /* Base styles for the body */
+  body {
+    font-weight: 400; /* Set default font weight */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    position: relative; /* Set relative positioning */
+    background-color: #fff !important; /* Set background color */
+    color: #333333 !important; /* Set text color */
+    font-family: 'Centra', sans-serif !important; /* Set font family */
+  }
+  
+  /* Reset margin, padding, and line-height for headings */
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    line-height: normal; /* Reset line height */
+  }
+  h2 {
+    color: #4169E1; /* Set color */
+  }
+  h2:hover {
+    color: #6495ED; /* Set hovering color */
+  }
+  /* Reset margin, padding, and line-height for paragraphs, links, list items, and buttons */
+  p, a, li, button, ul {
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    line-height: normal; /* Reset line height */
+    text-decoration: none; /* Remove default text decoration */
+  }
+  
+  /* Remove underline on hover for links */
+  a:hover {
+    text-decoration: none; /* Remove underline */
+  }
+
+/* Styles for header */
+header {
+    background-color: #4169E1; /* Set background color */
+    color: #fff; /* Set text color */
+    text-align: center; /* Center align text */
+    width: 100%; /* Full width */
+    margin: 0 auto; /* Center content horizontally */
+    padding: 20px; /* Add padding */
+  }
+  
+  /* Styles for main content sections */
+  section {
+    margin: 60px 200px; /* Add margin */
+    background: linear-gradient(120.21deg, rgba(176, 196, 222, 0.5) -5.91%, rgba(100, 149, 237, 0.5) 111.58%); /* Set background gradient */
+    border-radius: 50px; /* Add border radius */
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  }
+  
+  /* Styles for heading 2 */
+  h2 {
+    margin-left: 1em; /* Add left margin */
+    margin-top: 1em; /* Add top margin */
+    font-size: 2em; /* Set font size */
+    color: #333; /* Set text color */
+    margin-bottom: 20px; /* Add bottom margin */
+  }
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  #feedback-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+  }
+
+  body {
+    font-family: Arial, sans-serif; /* Set font family */
+    margin: 0; /* Reset margin */
+    padding: 0; /* Reset padding */
+    background-image: url(../images/flowers.png); /* Set background image */
+  }
+  
+  #next-btn {
+    /* 添加一些额外的样式，使按钮看起来更大或者更明显 */
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4169E1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 25px;
+  }
+
+  #submit-btn {
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #4169E1;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 25px;
+  }
+
+/* 将输入框容器设置为 flex 布局 */
+#question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* 垂直居中 */
+  }
+  
+
+/* 问题标题的样式 */
+#question-container label {
+    font-size: 32px; /* 设置字体大小 */
+    font-weight: bold; /* 设置粗体 */
+    color: #121212;
+    margin-bottom: 10px; /* 设置底部间距 */
+  }
+  
+  /* 设置输入框的宽度和其他样式 */
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  textarea {
+    resize: vertical; /* 允许垂直方向调整大小 */
+  }

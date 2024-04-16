@@ -123,7 +123,7 @@ input:focus, textarea:focus, select:focus {
   color: #fff; /* Sets the text color */
   border: none; /* Removes the border */
   border-radius: 5px; /* Sets the border radius */
-  cursor: pointer; /* Sets the cursor to a pointer */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
 }
 
 

@@ -71,11 +71,18 @@ export const NavBar = () => {
                 <a href="#"><img src={navIconDiscord} alt="" /></a>
                 <a href="#"><img src={navIconFacebook} alt="" /></a>
               </div>
-              <HashLink to='#connect'>
-                <button className="vvd"><span>Contact Me Now</span></button>
+              {/* <HashLink to='#connect'> */}
+                <a href="./feedback.html">
+                <button className="vvd"><span>Feedback Wanted</span></button>
                 {/* The Navbar.Collapse also contains a span with some social media icons 
                 and a HashLink component that points to the 'connect' section of the page.  */}
-              </HashLink>
+
+                {/* I changed the hash link here for the feedback form, 
+                and since feedback form is another static webpage, 
+                so I just use basic operation to acchieve the link.*/}
+                
+              </a>
+              {/* </HashLink> */}
             </span>
           </Navbar.Collapse>
         </Container>
