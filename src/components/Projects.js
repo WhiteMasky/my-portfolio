@@ -13,16 +13,19 @@ export const Projects = () => {
       title: "Marrakech",
       description: "My first attempt at a game using Java",
       imgUrl: projImg1,
+      linkUrl: "https://github.com/WhiteMasky/Marrakech",
     },
     {
       title: "Bob's Adventure",
       description: "A simple web-based galgame",
       imgUrl: projImg2,
+      linkUrl: "https://github.com/WhiteMasky/Bob-s-Adventure",
     },
     {
       title: "My Portfolio",
       description: "My portfolio built with React.js and Bootstrap",
       imgUrl: projImg3,
+      linkUrl: "https://github.com/WhiteMasky/my-portfolio",
     },
   ];
 
