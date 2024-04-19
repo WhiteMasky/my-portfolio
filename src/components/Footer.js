@@ -29,10 +29,10 @@ export const Footer = () => {
           </Col>
           <Col size={12} sm={6} className="text-center text-sm-end">
             <div className="social-icon">
-              <a href="#"><img src={navIconLinkedIn} alt="" /></a>
-              <a href="#"><img src={navIconGithub} alt="" /></a>
-              <a href="#"><img src={navIconDiscord} alt="" /></a>
-              <a href="#"><img src={navIconFacebook} alt="" /></a>
+                <a href="https://www.linkedin.com/in/yichizhang54"><img src={navIconLinkedIn} alt="" /></a>
+                <a href="https://github.com/WhiteMasky"><img src={navIconGithub} alt="" /></a>
+                <a href="https://discord.com/users/striker0504"><img src={navIconDiscord} alt="" /></a>
+                <a href="https://www.facebook.com/YichiZhang0504"><img src={navIconFacebook} alt="" /></a>
             </div>
             <p>Designed and Coded by Yichi Zhang</p>
             {/* The second section contains a div with the class social-icon, 

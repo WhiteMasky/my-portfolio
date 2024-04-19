@@ -66,10 +66,10 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="#"><img src={navIconLinkedIn} alt="" /></a>
-                <a href="#"><img src={navIconGithub} alt="" /></a>
-                <a href="#"><img src={navIconDiscord} alt="" /></a>
-                <a href="#"><img src={navIconFacebook} alt="" /></a>
+                <a href="https://www.linkedin.com/in/yichizhang54"><img src={navIconLinkedIn} alt="" /></a>
+                <a href="https://github.com/WhiteMasky"><img src={navIconGithub} alt="" /></a>
+                <a href="https://discord.com/users/striker0504"><img src={navIconDiscord} alt="" /></a>
+                <a href="https://www.facebook.com/YichiZhang0504"><img src={navIconFacebook} alt="" /></a>
               </div>
               {/* <HashLink to='#connect'> */}
                 <a href="./feedback.html">
