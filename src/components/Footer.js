@@ -3,7 +3,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import logo from '../assets/img/logo.svg';
 import navIconLinkedIn from '../assets/img/nav-icon-linkedin.svg';
 import navIconGithub from '../assets/img/nav-icon-github.svg';
-import navIconDiscord from '../assets/img/nav-icon-discord.svg';
+import navIconYoutube from '../assets/img/nav-icon-youtube.svg';
 import navIconFacebook from '../assets/img/nav-icon-facebook.svg';
 import { HandThumbsUpFill } from 'react-bootstrap-icons';
 
@@ -31,7 +31,7 @@ export const Footer = () => {
             <div className="social-icon">
                 <a href="https://www.linkedin.com/in/yichizhang54"><img src={navIconLinkedIn} alt="" /></a>
                 <a href="https://github.com/WhiteMasky"><img src={navIconGithub} alt="" /></a>
-                <a href="https://discord.com/users/striker0504"><img src={navIconDiscord} alt="" /></a>
+                <a href="https://www.youtube.com/channel/UC5jq2ipvNFnFPE2v_zbdZBw"><img src={navIconYoutube} alt="" /></a>
                 <a href="https://www.facebook.com/YichiZhang0504"><img src={navIconFacebook} alt="" /></a>
             </div>
             <p>Designed and Coded by Yichi Zhang</p>
