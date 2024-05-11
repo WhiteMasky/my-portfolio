@@ -64,7 +64,7 @@ input:focus, textarea:focus, select:focus {
 }
 
 .enter_container {
-  background-image: url('../../src/assets/img/flowers_inverted.png');
+  background-image: url('../images/flowers.png');
   background-size: cover;
   background-position: center;
   display: flex;

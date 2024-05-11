@@ -10,6 +10,7 @@ import { Gallery } from "./components/Gallery";
 import { Projects } from "./components/Projects";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { ShareButtons } from './components/ShareButtons';
 
 /**
  * The main component of the application.
@@ -55,10 +56,13 @@ function App() {
       )}
       {showPage && (
         <div className="App">
+          <div className="sidebar">
+            <ShareButtons isDarkMode={isDarkMode} toggleMode={toggleMode}/>
+          </div>
           {/* Render the navigation bar component */}
           <NavBar isDarkMode={isDarkMode} toggleMode={toggleMode} />
           {/* Render the banner component */}
-          <Banner isDarkMode={isDarkMode} toggleMode={toggleMode}/>
+          <Banner isDarkMode={isDarkMode} toggleMode={toggleMode} />
           {/* Render the about section */}
           <About />
           {/* Render the gallery section */}
@@ -68,7 +72,7 @@ function App() {
           {/* Render the contact section */}
           <Contact />
           {/* Render the footer component */}
-          <Footer isDarkMode={isDarkMode} toggleMode={toggleMode}/>
+          <Footer isDarkMode={isDarkMode} toggleMode={toggleMode} />
         </div>
       )}
     </div>
