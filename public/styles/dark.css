@@ -562,3 +562,266 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   border: 1px solid rgba(0, 0, 0, 0.5); /* Sets a 1px solid border with transparency */
   border-radius: 0 55px 55px 0; /* Sets the border radius to create rounded corners on the top-right and bottom-right */
 }
+/* Styles for the project image box */
+.proj-imgbx {
+  position: relative; /* Set the position to relative */
+  border-radius: 30px; /* Set the border radius to 30px */
+  overflow: hidden; /* Hide any content that overflows the box */
+  margin-bottom: 24px; /* Set the bottom margin to 24px */
+}
+
+/* Styles for the pseudo-element before the project image box */
+.proj-imgbx::before {
+  content: ""; /* Add an empty content */
+  background: linear-gradient(90.21deg, #bd7f0b -5.91%, #6d8d4d 111.58%); /* Set the background gradient */
+  opacity: 0.85; /* Set the opacity to 0.85 */
+  position: absolute; /* Set the position to absolute */
+  width: 100%; /* Set the width to 100% */
+  height: 0; /* Set the initial height to 0 */
+  transition: 0.4s ease-in-out; /* Add a transition effect */
+}
+
+/* Styles for the pseudo-element before the project image box on hover */
+.proj-imgbx:hover::before {
+  height: 100%; /* Set the height to 100% on hover */
+}
+
+/* Styles for the project text */
+.proj-txtx {
+  position: absolute; /* Set the position to absolute */
+  text-align: center; /* Center the text horizontally */
+  top: 65%; /* Set the initial top position to 65% */
+  left: 50%; /* Set the left position to 50% */
+  transform: translate(-50%, -50%); /* Center the text vertically */
+  transition: 0.5s ease-in-out; /* Add a transition effect */
+  opacity: 0; /* Set the initial opacity to 0 */
+  width: 100%; /* Set the width to 100% */
+}
+
+/* Styles for the project text when hovering over the project image box */
+.proj-imgbx:hover .proj-txtx {
+  top: 50%; /* Set the top position to 50% on hover */
+  opacity: 1; /* Set the opacity to 1 on hover */
+}
+
+/* Styles for the heading in the project text */
+.proj-txtx h4 {
+  font-size: 30px; /* Set the font size to 30px */
+  font-weight: 700; /* Set the font weight to 700 */
+  letter-spacing: 0.8px; /* Set the letter spacing to 0.8px */
+  line-height: 1.1em; /* Set the line height to 1.1em */
+}
+
+/* Styles for the span element in the project text */
+.proj-txtx span {
+  font-style: italic; /* Set the font style to italic */
+  font-weight: 400; /* Set the font weight to 400 */
+  font-size: 15px; /* Set the font size to 15px */
+  letter-spacing: 0.8px; /* Set the letter spacing to 0.8px */
+}
+
+/* Dark Mode Styles */
+/* Styles for the headings in the second and third tab panes of the project section */
+.project .tab-pane[eventKey="second"] h3,
+.project .tab-pane[eventKey="third"] h3 {
+  color: #cccccc; /* Set the text color to #cccccc */
+}
+
+/* Styles for the paragraphs in the second and third tab panes of the project section */
+.project .tab-pane[eventKey="second"] p,
+.project .tab-pane[eventKey="third"] p {
+  color: #999999; /* Set the text color to #999999 */
+}
+
+/* Styles for the list items in the second and third tab panes of the project section */
+.project .tab-pane[eventKey="second"] li,
+.project .tab-pane[eventKey="third"] li {
+  color: #cccccc; /* Set the text color to #cccccc */
+}
+
+/* Styles for the contact section */
+.contact {
+  background: linear-gradient(120.21deg, #9b6104 -5.91%, #413f6d 111.58%); /* Set the background gradient */
+  padding: 60px 0 200px 0; /* Set the padding */
+}
+
+/* Styles for the image in the contact section */
+.contact img {
+  width: 92%; /* Set the width to 92% */
+}
+
+/* Styles for the heading in the contact section */
+.contact h2 {
+  font-size: 45px; /* Set the font size to 45px */
+  font-weight: 700; /* Set the font weight to 700 */
+  margin-bottom: 30px; /* Set the bottom margin to 30px */
+}
+
+/* Styles for the input and textarea elements in the contact form */
+.contact form input, .contact form textarea {
+  width: 100%; /* Set the width to 100% */
+  background: rgba(0, 0, 0, 0.1); /* Set the background color with opacity */
+  border: 1px solid rgba(0, 0, 0, 0.5); /* Set the border */
+  border-radius: 20px; /* Set the border radius to 20px */
+  color: #000; /* Set the text color to #000 */
+  margin: 0 0 8px 0; /* Set the margin */
+  padding: 18px 26px; /* Set the padding */
+  font-weight: 500; /* Set the font weight to 500 */
+  font-size: 18px; /* Set the font size to 18px */
+  letter-spacing: 0.8px; /* Set the letter spacing to 0.8px */
+  transition: 0.3s ease-in-out; /* Add a transition effect */
+}
+
+/* Styles for the input and textarea elements in the contact form when focused */
+.contact form input:focus, .contact form textarea:focus {
+  background: rgba(0, 0, 0, 1); /* Set the background color to black with opacity */
+  color: #dedede; /* Set the text color to #dedede */
+}
+
+/* Styles for the placeholder text in the input and textarea elements of the contact form */
+.contact form input::placeholder, .contact form textarea::placeholder {
+  font-size: 16px; /* Set the font size to 16px */
+  font-weight: 400; /* Set the font weight to 400 */
+  color: #000; /* Set the text color to #000 */
+}
+
+/* Styles for the placeholder text in the input and textarea elements of the contact form when focused */
+.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
+  color: #dedede; /* Set the text color to #dedede */
+  opacity: 0.8; /* Set the opacity to 0.8 */
+}
+
+/* Styles for the button in the contact form */
+.contact form button {
+  font-weight: 700; /* Set the font weight to 700 */
+  color: #fff; /* Set the text color to white */
+  background-color: #000; /* Set the background color to black */
+  padding: 14px 48px; /* Set the padding */
+  font-size: 18px; /* Set the font size to 18px */
+  margin-top: 25px; /* Set the top margin to 25px */
+  border-radius: 0; /* Remove the border radius */
+  position: relative; /* Set the position to relative */
+  transition: 0.3s ease-in-out; /* Add a transition effect */
+}
+
+/* Styles for the span element inside the button in the contact form */
+.contact form button span {
+  z-index: 1; /* Set the z-index to 1 */
+  position: relative; /* Set the position to relative */
+}
+
+/* Styles for the button in the contact form on hover */
+.contact form button:hover {
+  color: #000; /* Set the text color to black on hover */
+}
+
+/* Styles for the pseudo-element before the button in the contact form */
+.contact form button::before {
+  content: ""; /* Add an empty content */
+  background: #dedede; /* Set the background color to #dedede */
+  width: 0; /* Set the initial width to 0 */
+  height: 100%; /* Set the height to 100% */
+  position: absolute; /* Set the position to absolute */
+  top: 0; /* Set the top position to 0 */
+  left: 0; /* Set the left position to 0 */
+  z-index: 0; /* Set the z-index to 0 */
+  transition: 0.3s ease-in-out; /* Add a transition effect */
+}
+
+/* Styles for the pseudo-element before the button in the contact form on hover */
+.contact form button:hover::before {
+  width: 100%; /* Set the width to 100% on hover */
+}
+
+/* Styles for the footer section */
+.footer {
+  padding: 0 0 50px 0; /* Set the padding */
+  background-image: url('./assets/img/flowers_inverted.png'); /* Set the background image */
+  background-position: center center; /* Set the background position to center */
+  background-size: cover; /* Set the background size to cover */
+  background-repeat: no-repeat; /* Prevent the background from repeating */
+}
+
+/* Styles for the image in the footer section */
+.footer img {
+  width: 26%; /* Set the width to 26% */
+}
+
+/* Styles for the social icons and paragraph elements in the footer section */
+.footer .social-icon, p {
+  font-weight: 400; /* Set the font weight to 400 */
+  font-size: 14px; /* Set the font size to 14px */
+  color: #cccccc; /* Set the text color to #cccccc */
+  letter-spacing: 0.5px; /* Set the letter spacing to 0.5px */
+  margin-top: 20px; /* Set the top margin to 20px */
+}
+
+/* Styles for the click-like element */
+.click-like {
+  margin-left: -450px; /* Set the left margin to -450px */
+  margin-top: 0px; /* Set the top margin to 0 */
+  margin-bottom: 10px; /* Set the bottom margin to 10px */
+}
+
+/* Styles for the hand-thumbs-up element */
+.hand-thumbs-up {
+  margin-left: -450px; /* Set the left margin to -450px */
+}
+
+/* Styles for the hand-thumbs-up element on hover */
+.hand-thumbs-up:hover {
+  cursor: pointer; /* Change the cursor to pointer on hover */
+}
+
+/* Styles for the pseudo-element before the hand-thumbs-up element */
+.hand-thumbs-up::before {
+  width: 42px; /* Set the width to 42px */
+  height: 42px; /* Set the height to 42px */
+  background-color: #a5720c; /* Set the background color to #a5720c */
+  border-radius: 50%; /* Set the border radius to 50% to create a circle */
+}
+
+/* Styles for the App component */
+.App {
+  text-align: center; /* Center the text */
+}
+
+/* Styles for the App logo */
+.App-logo {
+  height: 40vmin; /* Set the height to 40vmin */
+  pointer-events: none; /* Disable pointer events */
+}
+
+/* Media query for reduced motion preference */
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear; /* Apply animation */
+  }
+}
+
+/* Styles for the App header */
+.App-header {
+  background-color: #d1d9e6; /* Set the background color to #d1d9e6 */
+  min-height: 100vh; /* Set the minimum height to 100vh */
+  display: flex; /* Use flexbox layout */
+  flex-direction: column; /* Set the flex direction to column */
+  align-items: center; /* Center the items horizontally */
+  justify-content: center; /* Center the items vertically */
+  font-size: calc(10px + 2vmin); /* Set the font size using a calculation */
+  color: black; /* Set the text color to black */
+}
+
+/* Styles for the App link */
+.App-link {
+  color: #9e6b0d; /* Set the text color to #9e6b0d */
+}
+
+/* Keyframes for the App logo spin animation */
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg); /* Set the starting rotation to 0 degrees */
+  }
+  to {
+    transform: rotate(360deg); /* Set the ending rotation to 360 degrees */
+  }
+}

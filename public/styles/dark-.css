@@ -1,0 +1,793 @@
+/* Applies margin and padding reset to all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Sets smooth scrolling behavior and padding for scrolling */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+/* Styles for the body element */
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #000 !important;
+  color: #cccccc !important;
+  font-family: 'Centra', sans-serif !important;
+}
+
+/* Applies margin and padding reset to heading elements */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+/* Applies margin and padding reset to paragraph, anchor, list, and button elements */
+p, a, li, button, ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+/* Styles for anchor elements on hover */
+a:hover {
+  text-decoration: none;
+}
+
+/* Styles for image elements */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Styles for button elements */
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+/* Styles for focused input, textarea, and select elements */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+/* Media query for screens with a minimum width of 1700px */
+@media (min-width:1700px) {
+  main .container {
+    max-width: 100%;
+    padding: 0 150px;
+  }
+}
+
+/* Styles for the "enter_title" class */
+.enter_title {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-right: 50px;
+}
+
+/* Styles for the "enter_container" class */
+.enter_container {
+  background-image: url('../images/flowers.png');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  height: 100vh;
+}
+
+/* Styles for the "enter_button" class */
+.enter_button {
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 16px; 
+  background-color: #ff8400;
+  color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styles for the "navbar" class */
+nav.navbar {
+  padding: 18px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 9999;
+  transition:  0.32s ease-in-out;
+}
+
+/* Styles for the "scrolled" class of the "navbar" class */
+nav.navbar.scrolled {
+  padding: 0px 0;
+  background-color: #be6a17;
+  opacity: 85%;
+}
+
+/* Styles for the "navbar-brand" class within the "navbar" class */
+nav.navbar a.navbar-brand {
+    width: 9%;
+}
+
+/* Styles for the "map-icon-dark" class */
+.map-icon-dark {
+  color: #fff;
+}
+
+/* Styles for the "map-icon" class within the "navbar-brand" class on hover */
+nav.navbar .navbar-brand .map-icon:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+/* Styles for the "navbar-link" class within the "navbar-nav" class */
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  font-weight: 400;
+  color: #dedede !important;
+  letter-spacing: 0.8px;
+  padding: 0 25px;
+  font-size: 18px;
+  opacity: 0.75;
+}
+
+/* Styles for the "navbar-link" class within the "navbar-nav" class on hover and when active */
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+    opacity: 1;
+}
+
+/* Styles for the "navbar-text" class */
+span.navbar-text {
+  display: flex;
+  align-items: center;
+}
+
+/* Styles for the "social-icon" class */
+.social-icon {
+  display: inline-block;
+  margin-left: 14px;
+}
+
+/* Styles for the "social-icon" class */
+.social-icon a {
+  width: 42px;
+  height: 42px;
+  background: rgba(165, 114, 12, 0.5);
+  display: inline-flex;
+  border-radius: 50%;
+  margin-right: 6px;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;  
+}
+
+/* Styles for the "social-icon" class before pseudo-element */
+.social-icon a::before {
+  content: "";
+  width: 42px;
+  height: 42px;
+  position: absolute;
+  background-color: #a5720c;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 0.3s ease-in-out;
+}
+
+/* Styles for the "social-icon" class before pseudo-element on hover */
+.social-icon a:hover::before {
+  transform: scale(1);
+}
+
+/* Styles for the "social-icon" class image */
+.social-icon a img {
+  width: 100%;
+  z-index: 1;
+  transition: 0.3s ease-in-out;
+}
+
+/* Styles for the "social-icon" class image on hover */
+.social-icon a:hover img {
+  filter: brightness(100%) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+/* Styles for the button within the "navbar-text" class */
+.navbar-text button {
+  font-weight: 700;
+  color: #dedede;
+  border: 3px solid #dedede;
+  border-radius: 10px;
+  padding: 18px 34px;
+  font-size: 18px;
+  margin-left: 18px;
+  position: relative;
+  background-color: transparent;
+  transition: 0.3s ease-in-out;
+}
+
+/* Styles for the span within the button within the "navbar-text" class */
+.navbar-text button span {
+  z-index: 1;
+}
+
+/* Styles for the button before pseudo-element within the "navbar-text" class */
+.navbar-text button::before {
+  content: "";
+  width: 0%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  border-radius: 10px;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+
+/* Styles for the button within the "navbar-text" class on hover */
+.navbar-text button:hover {
+  color: #dedede;
+}
+
+/* Styles for the button before pseudo-element within the "navbar-text" class on hover */
+.navbar-text button:hover::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+/* Styles for the "navbar-toggler" class within the "navbar" class on active and focus */
+nav.navbar .navbar-toggler:active,
+nav.navbar .navbar-toggler:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* Styles for the "navbar-toggler-icon" class within the "navbar" class */
+nav.navbar .navbar-toggler-icon {
+  width: 24px;
+  height: 17px;
+  background-image: none;
+  position: relative;
+  border-bottom: 2px solid #dedede;
+  transition: all 300ms linear;
+  top: -2px;
+}
+
+/* Styles for the "navbar-toggler-icon" class within the "navbar" class on focus */
+nav.navbar .navbar-toggler-icon:focus {
+  border-bottom: 2px solid #000;
+}
+
+/* Styles for the "navbar-toggler-icon" class after and before pseudo-elements within the "navbar" class */
+nav.navbar .navbar-toggler-icon:after,
+nav.navbar .navbar-toggler-icon:before {
+  width: 24px;
+  position: absolute;
+  height: 2px;
+  background-color: #000;
+  top: 0;
+  left: 0;
+  content: '';
+  z-index: 2;
+  transition: all 300ms linear;
+}
+
+/* Styles for the "navbar-toggler-icon" class after pseudo-element within the "navbar" class */
+nav.navbar .navbar-toggler-icon:after {
+  top: 8px;
+}
+
+/* Styles for the "navbar-toggler" class with "aria-expanded" attribute set to "true" and the "navbar-toggler-icon" class after pseudo-element within the "navbar" class */
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(45deg);
+  background-color: #000;
+  height: 2px;
+}
+
+/* Styles for the "navbar-toggler" class with "aria-expanded" attribute set to "true" and the "navbar-toggler-icon" class before pseudo-element within the "navbar" class */
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: translateY(8px) rotate(-45deg);
+  background-color: #000;
+  height: 2px;
+}
+
+/* Styles for the "navbar-toggler" class with "aria-expanded" attribute set to "true" and the "navbar-toggler-icon" class within the "navbar" class */
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  border-color: transparent;
+}
+
+/* Styles for the "banner" class */
+.banner {
+  margin-top: 0;
+  padding: 260px 0 100px 0;
+  background-image: url('./assets/img/flowers_inverted.png'); 
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* Styles for the "tagline" class within the "banner" class */
+.banner .tagline {
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  padding: 8px 10px;
+  background: linear-gradient(90.21deg, rgba(158, 107, 13, 0.5) -5.91%, rgba(170, 74, 0, 0.5) 111.58%);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-size: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+/* Styles for the h1 element within the "banner" class */
+.banner h1 {
+  font-size: 65px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1;
+  margin-bottom: 20px;
+  display: block;
+}
+
+/* Styles for the p element within the "banner" class */
+.banner p {
+  color: #d1d9e6;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  width: 96%;
+}
+
+/* Styles for the button within the "banner" class */
+.banner button {
+  color: #dedede;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 60px;
+  letter-spacing: 0.8px;
+  display: flex;
+  align-items: center;
+}
+
+/* Styles for the svg element within the button within the "banner" class */
+.banner button svg {
+  font-size: 25px;
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  transition: 0.3s ease-in-out;
+  line-height: 1;
+}
+
+/* Styles for the svg element within the button within the "banner" class on hover */
+.banner button:hover svg {
+  margin-top: 25px;
+}
+
+/* Styles for the img element within the "banner" class */
+.banner img {
+  animation: updown 3s linear infinite;
+}
+
+/* Keyframes animation for the "updown" animation */
+@keyframes updown {
+  0% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Styles for the .wrap class within the .txt-rotate class */
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #ccc;
+}
+
+/* Styles for the "about" class */
+.about {
+  padding: 80px 0;
+  position: relative;
+  background: linear-gradient(120.21deg, #413f6d -5.91%, #9b6104 111.58%);
+}
+
+/* Styles for the p element within the "about" class */
+.about p {
+  color: #cccccc;
+  font-size: 14px;
+  width: 80%;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 50px auto;
+  text-align: justify;
+  text-justify: inter-ideograph;
+  width: 56%;
+}
+
+/* Styles for the "about-icon" class within the "about" class */
+.about .about-icon {
+  color: #be6a17;
+}
+
+/* Styles for the "gallery-image" class */
+.gallery-image {
+  padding: 80px 0 50px 0;
+  position: relative;
+}
+
+/* Styles for the "gallery-image-bx" class */
+.gallery-image-bx {
+  background: #eaeaea;
+  border-radius: 64px;
+  text-align: center;
+  padding: 60px 50px;
+  margin-top: -60px;
+}
+
+/* Styles for the h2 element within the "gallery-image" class */
+.gallery-image h2 {
+  font-size: 45px;
+  font-weight: 700;
+}
+
+/* Styles for the p element within the "gallery-image" class */
+.gallery-image p {
+  color: #dedede; 
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px 0 75px 0;
+}
+
+/* Styles for the "image-slider" class */
+.image-slider {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Styles for the img element within the "item" class within the "image-slider" class */
+.image-slider .item img {
+  width: 50%;
+  margin: 0 auto 15px auto;
+  border-radius: 20px;
+}
+
+/* Styles for the "project" class */
+.project {
+  padding: 80px 0;
+  position: relative;
+}
+
+/* Styles for the h2 element within the "project" class */
+.project h2 {
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Styles for the p element within the "project" class */
+.project p {
+  color: #cccccc;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  line-height: 1.5em;
+  margin: 14px auto 30px auto;
+  text-align: center;
+  width: 56%;
+}
+
+/* Styles for the "nav-pills" class within the "project" class */
+.project .nav.nav-pills {
+  width: 72%;
+  margin: 0 auto;
+  border-radius: 50px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+/* Styles for the "nav-item" class within the "nav-pills" class within the "project" class */
+.project .nav.nav-pills .nav-item {
+  width: 33.33333%;
+}
+
+/* Styles for the "nav-link" class within the "nav-pills" class within the "project" class */
+.project .nav.nav-pills .nav-link {
+  background-color: transparent;
+  border-radius: 0;
+  padding: 17px 0;
+  color: #dedede;
+  width: 100%;
+  font-size: 17px;
+  letter-spacing: 0.8px;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s ease-in-out;
+  text-align: center;
+  z-index: 0;
+}
+
+/* Styles for the "nav-link" class before pseudo-element within the "nav-pills" class within the "project" class */
+.project .nav.nav-pills .nav-link::before {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 100%;
+  background: #937451;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.3s ease-in-out;
+}
+
+/* Styles for the "nav-link" class with "active" state before pseudo-element within the "nav-pills" class within the "project" class */
+.project .nav.nav-pills .nav-link.active::before {
+  width: 100% !important;
+}
+
+/* Styles for the "nav-link" class with "active" state within the "nav-pills" class within the "project" class */
+.project .nav.nav-pills .nav-link.active {
+  border: 1px solid rgba(0, 0, 0, 1);
+}
+
+/* Styles for the "projects-tabs-tab-first" id within the "nav-link" class */
+.nav-link#projects-tabs-tab-first {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 55px 0px 0px 55px;
+}
+
+/* Styles for the "projects-tabs-tab-second" id within the "nav-link" class */
+.nav-link#projects-tabs-tab-second {
+  border-top: 1px solid rgba(0, 0, 0, 0.5);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+/* Styles for the "projects-tabs-tab-third" id within the "nav-link" class */
+.nav-link#projects-tabs-tab-third {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 0 55px 55px 0;
+}
+
+.proj-imgbx {
+  position: relative;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-bottom: 24px;
+}
+
+.proj-imgbx::before {
+  content: "";
+  background: linear-gradient(90.21deg, #bd7f0b -5.91%, #6d8d4d 111.58%);
+  opacity: 0.85;
+  position: absolute;
+  width: 100%;
+  height: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.proj-imgbx:hover::before {
+  height: 100%;
+}
+
+.proj-txtx {
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: 0.5s ease-in-out;
+  opacity: 0;
+  width: 100%;
+}
+
+.proj-imgbx:hover .proj-txtx {
+  top: 50%;
+  opacity: 1;
+}
+
+.proj-txtx h4 {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 1.1em;
+}
+
+.proj-txtx span {
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  letter-spacing: 0.8px;
+}
+
+/* Dark Mode */
+.project .tab-pane[eventKey="second"] h3,
+.project .tab-pane[eventKey="third"] h3 {
+  color: #cccccc;
+}
+
+.project .tab-pane[eventKey="second"] p,
+.project .tab-pane[eventKey="third"] p {
+  color: #999999;
+}
+
+.project .tab-pane[eventKey="second"] li,
+.project .tab-pane[eventKey="third"] li {
+  color: #cccccc;
+}
+.contact {
+  background: linear-gradient(120.21deg, #9b6104 -5.91%, #413f6d 111.58%);
+  padding: 60px 0 200px 0;
+}
+
+.contact img {
+  width: 92%;
+}
+
+.contact h2 {
+  font-size: 45px;
+  font-weight:
+  700;
+  margin-bottom: 30px;
+}
+
+.contact form input, .contact form textarea {
+  width: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
+  color: #000;
+  margin: 0 0 8px 0;
+  padding: 18px 26px;
+  font-weight: 500;
+  font-size: 18px;
+  letter-spacing: 0.8px;
+  transition: 0.3s ease-in-out;
+}
+
+.contact form input:focus, .contact form textarea:focus {
+  background: rgba(0, 0, 0, 1);
+  color: #dedede;
+}
+
+.contact form input::placeholder, .contact form textarea::placeholder {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+
+.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
+  color: #dedede;
+  opacity: 0.8;
+}
+
+.contact form button {
+  font-weight: 700;
+  color: #fff;
+  background-color: #000;
+  padding: 14px 48px;
+  font-size: 18px;
+  margin-top: 25px;
+  border-radius: 0;
+  position: relative;
+  transition: 0.3s ease-in-out;
+}
+
+.contact form button span {
+  z-index: 1;
+  position: relative;
+}
+
+.contact form button:hover {
+  color: #000;
+}
+
+.contact form button::before {
+  content: "";
+  background: #dedede;
+  width: 0;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  transition: 0.3s ease-in-out;
+}
+
+.contact form button:hover::before {
+  width: 100%;
+}
+
+.footer {
+  padding: 0 0 50px 0;
+  background-image: url('./assets/img/flowers_inverted.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.footer img {
+  width: 26%;
+}
+
+.footer .social-icon, p {
+  font-weight: 400;
+  font-size: 14px;
+  color: #cccccc;
+  letter-spacing: 0.5px;
+  margin-top: 20px;
+}
+
+.click-like {
+  margin-left: -450px;
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.hand-thumbs-up {
+  margin-left: -450px;
+}
+
+.hand-thumbs-up:hover {
+  cursor: pointer;
+}
+
+.hand-thumbs-up::before {
+  width: 42px;
+  height: 42px;
+  background-color: #a5720c;
+  border-radius: 50%;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #d1d9e6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: black;
+}
+
+.App-link {
+  color: #9e6b0d;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
