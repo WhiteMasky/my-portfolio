@@ -2,11 +2,13 @@ import React from 'react';
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import headerImg from "../assets/img/coding-girl.svg";
+import headerImgDark from "../assets/img/coding-girl-brown.svg"
 import { PersonCircle, ArrowDownCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
 
-export const Banner = () => {
+export const Banner = ({ isDarkMode, toggleMode }) => {
+  console.log('isDarkMode:', isDarkMode);
   const [loopNum, setLoopNum] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [text, setText] = useState('');
@@ -85,7 +87,8 @@ export const Banner = () => {
             <TrackVisibility offset={50}>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__swing" : "animate__animated animate__flipOutX"}>
-                  <img src={headerImg} alt="Header Img"/>
+                  {/* <img src={headerImg} alt="Header Img"/> */}
+                  <img onClick={toggleMode} src={isDarkMode ? headerImgDark : headerImg} alt="Header Img"/>
                 </div>}
             </TrackVisibility>
           </Col>

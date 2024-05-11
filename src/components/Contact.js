@@ -26,25 +26,56 @@ export const Contact = () => {
   }
   // The onFormUpdate function is used to update the formDetails state when a user types into the form fields. 
   // It takes a category (which corresponds to a key in the formDetails object) and a value, and updates formDetails accordingly.
+  
+  
+  // const handleSubmit = async (e) => {
+  //   e.preventDefault();
+  //   setButtonText("Sending...");
+  //   let response = await fetch("http://localhost:5000/contact", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json;charset=utf-8",
+  //     },
+  //     body: JSON.stringify(formDetails),
+  //   });
+  //   setButtonText("Send");
+  //   let result = await response.json();
+  //   setFormDetails(formInitialDetails);
+  //   if (result.code == 200) {
+  //     setStatus({ succes: true, message: 'Message sent successfully'});
+  //   } else {
+  //     setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
+  //   }
+  // };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setButtonText("Sending...");
-    let response = await fetch("http://localhost:5000/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json;charset=utf-8",
-      },
-      body: JSON.stringify(formDetails),
-    });
-    setButtonText("Send");
-    let result = await response.json();
-    setFormDetails(formInitialDetails);
-    if (result.code == 200) {
-      setStatus({ succes: true, message: 'Message sent successfully'});
-    } else {
-      setStatus({ succes: false, message: 'Something went wrong, please try again later.'});
+  
+    try {
+      let response = await fetch("http://localhost:5000/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json;charset=utf-8",
+        },
+        body: JSON.stringify(formDetails),
+      });
+  
+      setButtonText("Send");
+      let result = await response.json();
+      setFormDetails(formInitialDetails);
+  
+      if (response.ok) {
+        setStatus({ success: true, message: 'Message sent successfully' });
+      } else {
+        setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+      }
+    } catch (error) {
+      setButtonText("Send");
+      setStatus({ success: false, message: 'Something went wrong, please try again later.' });
+      console.error('Error:', error);
     }
   };
+
   // The handleSubmit function is an asynchronous function that is triggered when the form is submitted. 
   // It prevents the default form submission, changes the buttonText to "Sending...", 
   // and sends a POST request to "http://localhost:5000/contact" with the formDetails as the body. 

@@ -1,0 +1,708 @@
+/* Default css */
+/* Reset CSS */
+/* Applies a basic reset to remove default styling from elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Smooth Scrolling */
+/* Enables smooth scrolling behavior and sets scroll padding */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 75px;
+}
+
+/* Body Styles */
+/* Sets default styles for the body */
+body {
+  font-weight: 400;
+  overflow-x: hidden;
+  position: relative;
+  background-color: #fff !important;
+  color: #333333 !important;
+  font-family: 'Centra', sans-serif !important;
+}
+
+/* Heading Styles */
+/* Resets margin, padding, and line-height for headings */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+}
+
+/* Text Styles */
+/* Resets margin, padding, line-height, and text-decoration for text elements */
+p, a, li, button, ul {
+  margin: 0;
+  padding: 0;
+  line-height: normal;
+  text-decoration: none;
+}
+
+/* Hover Styles */
+/* Removes text decoration on hover */
+a:hover {
+  text-decoration: none;
+}
+
+/* Image Styles */
+/* Sets images to be responsive */
+img {
+  width: 100%;
+  height: auto;
+}
+
+/* Button Styles */
+/* Removes border and background color from buttons */
+button {
+  border: 0;
+  background-color: transparent;
+}
+
+/* Focus Styles */
+/* Removes outline on focus for input, textarea, and select elements */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+}
+
+/* Media Query */
+/* Applies styles only when the viewport width is greater than or equal to 1700px */
+@media (min-width:1700px) {
+  main .container {
+    max-width: 100%;
+    padding: 0 150px;
+  }
+}
+
+/* Before entering the main content */
+.enter_title {
+  font-size: 30px; /* Sets the font size to 30 pixels */
+  font-weight: 700; /* Sets the font weight to bold */
+  text-align: center; /* Centers the text horizontally */
+  margin-right: 50px; /* Sets the right margin to 50 pixels */
+}
+
+.enter_container {
+  background-image: url('../../src/assets/img/flowers.png'); /* Sets the background image */
+  background-size: cover; /* Makes the background image cover the entire container */
+  background-position: center; /* Sets the background image position to center */
+  display: flex; /* Displays the container as a flex container */
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  height: 100vh; /* Sets the height of the container to 100% of the viewport height */
+}
+
+.enter_button {
+  justify-content: center; /* Centers the content horizontally */
+  align-items: center; /* Centers the content vertically */
+  margin-left: ; /* Sets the left margin */
+  padding: 10px 20px; /* Sets the padding */
+  font-size: 16px; /* Sets the font size to 16 pixels */
+  background-color: #007bff; /* Sets the background color */
+  color: #fff; /* Sets the text color */
+  border: none; /* Removes the border */
+  border-radius: 5px; /* Sets the border radius */
+  cursor: pointer; /* Changes the cursor to a pointer on hover */
+}
+
+
+/* Styles for the navigation bar */
+nav.navbar {
+  padding: 18px 0; /* Adds padding of 18px on the top and bottom */
+  position: fixed; /* Sets the position to fixed */
+  width: 100%; /* Sets the width to 100% */
+  top: 0; /* Sets the top position to 0 */
+  z-index: 9999; /* Sets the z-index to 9999 */
+  transition:  0.32s ease-in-out; /* Adds a transition effect with a duration of 0.32s */
+}
+
+/* Styles for the navigation bar when scrolled */
+nav.navbar.scrolled {
+  padding: 0px 0; /* Adds padding of 0px on the top and bottom when scrolled */
+  background-color: #4169E1 ; /* Sets the background color to #4169E1 */
+  opacity: 85%; /* Sets the opacity to 85% */
+}
+
+/* Styles for the navbar brand */
+nav.navbar a.navbar-brand {
+    width: 9%; /* Sets the width to 9% */
+}
+
+/* Styles for the map icon in the navbar */
+.map-icon-light {
+  color: #121212; /* Sets the color to #121212 */
+}
+
+/* Styles for the map icon on hover */
+nav.navbar .navbar-brand .map-icon:hover {
+  transform: scale(1.1); /* Scales the map icon to 1.1 times its original size on hover */
+  transition: 0.3s ease-in-out; /* Adds a transition effect with a duration of 0.3s */
+}
+
+/* Styles for the navigation links */
+nav.navbar .navbar-nav .nav-link.navbar-link {
+  font-weight: 400; /* Sets the font weight to 400 */
+  color: #121212 !important; /* Sets the text color to #121212 */
+  letter-spacing: 0.8px; /* Sets the letter spacing to 0.8px */
+  padding: 0 25px; /* Adds padding of 0px on the left and right */
+  font-size: 18px; /* Sets the font size to 18px */
+  opacity: 0.75; /* Sets the opacity to 0.75 */
+}
+
+/* Styles for the active and hover state of navigation links */
+nav.navbar .navbar-nav a.nav-link.navbar-link:hover,
+nav.navbar .navbar-nav a.nav-link.navbar-link.active {
+    opacity: 1; /* Sets the opacity to 1 on hover and active state */
+}
+
+/* Styles for the social icons */
+span.navbar-text {
+  display: flex; /* Sets the display to flex */
+  align-items: center; /* Aligns items vertically in the center */
+}
+
+/* Styles for each social icon */
+.social-icon {
+  display: inline-block; /* Sets the display to inline-block */
+  margin-left: 14px; /* Sets the left margin to 14px */
+}
+
+/* Styles for the link container of each social icon */
+.social-icon a {
+  width: 42px; /* Sets the width to 42px */
+  height: 42px; /* Sets the height to 42px */
+  background: rgba(90, 141, 243, 0.5); /* Sets the background color to rgba(90, 141, 243, 0.5) */
+  display: inline-flex; /* Sets the display to inline-flex */
+  border-radius: 50%; /* Sets the border radius to 50% */
+  margin-right: 6px; /* Sets the right margin to 6px */
+  align-items: center; /* Aligns items vertically in the center */
+  justify-content: center; /* Aligns items horizontally in the center */
+  line-height: 1; /* Sets the line height to 1 */
+}
+
+/* Styles for the background circle of each social icon on hover */
+.social-icon a::before {
+  content: ""; /* Adds an empty content before the link container */
+  width: 42px; /* Sets the width to 42px */
+  height: 42px; /* Sets the height to 42px */
+  position: absolute; /* Sets the position to absolute */
+  background-color: #5a8df3; /* Sets the background color to #5a8df3 */
+  border-radius: 50%; /* Sets the border radius to 50% */
+  transform: scale(0); /* Scales the background circle to 0 times its original size */
+  transition: 0.3s ease-in-out; /* Adds a transition effect with a duration of 0.3s */
+}
+
+/* Styles for the background circle of each social icon on hover */
+.social-icon a:hover::before {
+  transform: scale(1); /* Scales the background circle to 1 times its original size on hover */
+}
+
+/* Styles for the social icon image */
+.social-icon a img {
+  width: 100%; /* Sets the width to 100% */
+  z-index: 1; /* Sets the z-index to 1 */
+  transition: 0.3s ease-in-out; /* Adds a transition effect with a duration of 0.3s */
+}
+
+/* Styles for the social icon image on hover */
+.social-icon a:hover img {
+  filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%); /* Applies a filter effect to the image on hover */
+}
+
+/* Styles for the button in the navbar */
+.navbar-text button {
+  font-weight: 700; /* Sets the font weight to bold */
+  color: #121212; /* Sets the text color to #121212 */
+  border: 3px solid #121212; /* Sets a 3px solid border with color #121212 */
+  border-radius: 10px; /* Sets the border radius to 10px */
+  padding: 18px 34px; /* Sets the padding to 18px on the top and bottom, and 34px on the left and right */
+  font-size: 18px; /* Sets the font size to 18px */
+  margin-left: 18px; /* Sets the left margin to 18px */
+  position: relative; /* Sets the position to relative */
+  background-color: transparent; /* Sets the background color to transparent */
+  transition: 0.3s ease-in-out; /* Adds a transition effect with a duration of 0.3s */
+}
+
+.navbar-text button span {
+  z-index: 1; /* Sets the z-index to 1 */
+}
+
+.navbar-text button::before {
+  content: ""; /* Adds an empty content before the button */
+  width: 0%; /* Sets the width to 0% */
+  height: 100%; /* Sets the height to 100% */
+  position: absolute; /* Sets the position to absolute */
+  background-color: #fff; /* Sets the background color to #fff */
+  border-radius: 10px; /* Sets the border radius to 10px */
+  left: 0; /* Sets the left position to 0 */
+  top: 0; /* Sets the top position to 0 */
+  z-index: -1; /* Sets the z-index to -1 */
+  transition: 0.3s ease-in-out; /* Adds a transition effect with a duration of 0.3s */
+}
+
+/* Styles for the hover effect of the button */
+.navbar-text button:hover {
+  color: #121212; /* Sets the text color to #121212 on hover */
+}
+
+.navbar-text button:hover::before {
+  content: ""; /* Adds an empty content before the button on hover */
+  width: 100%; /* Sets the width to 100% on hover */
+  height: 100%; /* Sets the height to 100% on hover */
+  position: absolute; /* Sets the position to absolute on hover */
+}
+
+/* Styles for the navbar toggler */
+nav.navbar .navbar-toggler:active,
+nav.navbar .navbar-toggler:focus {
+  outline: none; /* Removes the outline on active and focus */
+  box-shadow: none; /* Removes the box shadow on active and focus */
+}
+
+nav.navbar .navbar-toggler-icon {
+  width: 24px; /* Sets the width to 24px */
+  height: 17px; /* Sets the height to 17px */
+  background-image: none; /* Removes the background image */
+  position: relative; /* Sets the position to relative */
+  border-bottom: 2px solid #121212; /* Sets a 2px solid border on the bottom with color #121212 */
+  transition: all 300ms linear; /* Adds a transition effect with a duration of 300ms */
+  top: -2px; /* Sets the top position to -2px */
+}
+
+/* Styles for the navbar toggler icon */
+nav.navbar .navbar-toggler-icon:focus {
+  border-bottom: 2px solid #fff; /* Adds a 2px solid border on the bottom with color #fff on focus */
+}
+
+nav.navbar .navbar-toggler-icon:after,
+nav.navbar .navbar-toggler-icon:before {
+  width: 24px; /* Sets the width to 24px */
+  position: absolute; /* Sets the position to absolute */
+  height: 2px; /* Sets the height to 2px */
+  background-color: #fff; /* Sets the background color to #fff */
+  top: 0; /* Sets the top position to 0 */
+  left: 0; /* Sets the left position to 0 */
+  content: ''; /* Adds an empty content */
+  z-index: 2; /* Sets the z-index to 2 */
+  transition: all 300ms linear; /* Adds a transition effect with a duration of 300ms */
+}
+
+nav.navbar .navbar-toggler-icon:after {
+  top: 8px; /* Sets the top position to 8px */
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
+  transform: rotate(45deg); /* Rotates the icon 45 degrees */
+  background-color: #fff; /* Sets the background color to #fff */
+  height: 2px; /* Sets the height to 2px */
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:before {
+  transform: translateY(8px) rotate(-45deg); /* Translates the icon 8px down and rotates it -45 degrees */
+  background-color: #fff; /* Sets the background color to #fff */
+  height: 2px; /* Sets the height to 2px */
+}
+
+nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
+  border-color: transparent; /* Sets the border color to transparent */
+}
+
+/* Styles for the banner section */
+.banner {
+  margin-top: 0; /* Sets the top margin to 0 */
+  padding: 260px 0 100px 0; /* Sets the padding to 260px on the top, 0 on the right and left, and 100px on the bottom */
+  background-image: url('./assets/img/flowers.png'); /* Sets the background image */
+  background-position: top center; /* Sets the background position to top center */
+  background-size: cover; /* Sets the background size to cover */
+  background-repeat: no-repeat; /* Sets the background repeat to no-repeat */
+}
+.banner .tagline {
+  font-weight: 700; /* Sets the font weight to bold */
+  letter-spacing: 0.8px; /* Sets the letter spacing to 0.8px */
+  padding: 8px 10px; /* Sets the padding to 8px on the top and bottom, and 10px on the left and right */
+  background: linear-gradient(90.21deg, rgba(97, 148, 242, 0.5) -5.91%, rgba(85, 181, 255, 0.5) 111.58%); /* Applies a linear gradient background */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Sets a 1px solid border with color rgba(255, 255, 255, 0.5) */
+  border-radius: 10px; /* Sets the border radius to 10px */
+  font-size: 20px; /* Sets the font size to 20px */
+  margin-bottom: 16px; /* Sets the bottom margin to 16px */
+  display: inline-block; /* Sets the display to inline-block */
+}
+.banner h1 {
+  font-size: 65px; /* Sets the font size to 65px */
+  font-weight: 700; /* Sets the font weight to bold */
+  letter-spacing: 0.8px; /* Sets the letter spacing to 0.8px */
+  line-height: 1; /* Sets the line height to 1 */
+  margin-bottom: 20px; /* Sets the bottom margin to 20px */
+  display: block; /* Sets the display to block */
+}
+.banner p {
+  color: #282c34; /* Sets the text color to #282c34 */
+  font-size: 18px; /* Sets the font size to 18px */
+  letter-spacing: 0.8px; /* Sets the letter spacing to 0.8px */
+  line-height: 1.5em; /* Sets the line height to 1.5em */
+  width: 96%; /* Sets the width to 96% */
+}
+.banner button {
+  color: #121212; /* Sets the text color to #121212 */
+  font-weight: 700; /* Sets the font weight to bold */
+  font-size: 20px; /* Sets the font size to 20px */
+  margin-top: 60px; /* Sets the top margin to 60px */
+  letter-spacing: 0.8px; /* Sets the letter spacing to 0.8px */
+  display: flex; /* Sets the display to flex */
+  align-items: center; /* Sets the vertical alignment to center */
+}
+.banner button svg {
+  font-size: 25px; /* Sets the font size to 25px */
+  margin-top: 5px; /* Sets the top margin to 5px */
+  margin-left: 10px; /* Sets the left margin to 10px */
+  margin-right: 10px; /* Sets the right margin to 10px */
+  transition: 0.3s ease-in-out; /* Adds a transition effect with a duration of 0.3s */
+  line-height: 1; /* Sets the line height to 1 */
+}
+.banner button:hover svg {
+  margin-top: 25px; /* Sets the top margin to 25px on hover */
+}
+.banner img {
+  animation: updown 3s linear infinite; /* Applies an animation called updown with a duration of 3s, linear timing function, and infinite iteration count */
+}
+/* Animation for moving an element up and down */
+/* Keyframes for animation moving elements up and down */
+@keyframes updown {
+  0% {
+    transform: translateY(-20px); /* Element moves up 20px */
+  }
+  50% {
+    transform: translateY(20px); /* Element moves down 20px */
+  }
+  100% {
+    transform: translateY(-20px); /* Element moves up 20px again */
+  }
+}
+
+/* Styles for the rotating border-right effect in a text element */
+.txt-rotate > .wrap {
+  border-right: 0.08em solid #666; /* Adds a thin solid border on the right side */
+}
+
+/* Styles for the about section */
+.about {
+  padding: 80px 0; /* Adds padding of 80px on top and bottom */
+  position: relative; /* Sets the position to relative */
+  background: linear-gradient(120.21deg, #B0C4DE -5.91%, #6495ED 111.58%); /* Applies a linear gradient background */
+}
+.about p {
+  color: #333333; /* Sets text color */
+  font-size: 14px; /* Sets font size to 14px */
+  width: 80%; /* Sets width to 80% */
+  letter-spacing: 0.8px; /* Adds letter spacing */
+  line-height: 1.5em; /* Sets line height */
+  margin: 14px auto 50px auto; /* Sets margins */
+  text-align: justify; /* Justifies text */
+  text-justify: inter-ideograph; /* Sets text justification */
+  width: 56%; /* Overrides previous width to 56% */
+}
+.about .about-icon {
+  color: #4169E1; /* Sets icon color */
+}
+
+/* Styles for the gallery section */
+.gallery-image {
+  padding: 80px 0 50px 0; /* Adds padding */
+  position: relative; /* Sets position to relative */
+}
+.gallery-image-bx {
+  background: #151515; /* Sets background color */
+  border-radius: 64px; /* Adds border radius */
+  text-align: center; /* Centers text */
+  padding: 60px 50px; /* Adds padding */
+  margin-top: -60px; /* Sets negative top margin */
+}
+.gallery-image h2 {
+  font-size: 45px; /* Sets font size */
+  font-weight: 700; /* Sets font weight */
+}
+.gallery-image p {
+  color: #121212; /* Sets text color */
+  font-size: 18px; /* Sets font size */
+  letter-spacing: 0.8px; /* Adds letter spacing */
+  line-height: 1.5em; /* Sets line height */
+  margin: 14px 0 75px 0; /* Sets margins */
+}
+.image-slider {
+  width: 80%; /* Sets width to 80% */
+  margin: 0 auto; /* Centers horizontally */
+  position: relative; /* Sets position to relative */
+}
+.image-slider .item img {
+  width: 50%; /* Sets width to 50% */
+  margin: 0 auto 15px auto; /* Centers image and adds bottom margin */
+  border-radius: 20px; /* Adds border radius */
+}
+
+/* Styles for the project section */
+.project {
+  padding: 80px 0; /* Adds padding */
+  position: relative; /* Sets position to relative */
+}
+.project h2 {
+  font-size: 45px; /* Sets font size */
+  font-weight: 700; /* Sets font weight */
+  text-align: center; /* Centers text */
+}
+.project p {
+  color: #333333; /* Sets text color */
+  font-size: 18px; /* Sets font size */
+  letter-spacing: 0.8px; /* Adds letter spacing */
+  line-height: 1.5em; /* Sets line height */
+  margin: 14px auto 30px auto; /* Sets margins */
+  text-align: center; /* Centers text */
+  width: 56%; /* Sets width to 56% */
+}
+.project .nav.nav-pills {
+  width: 72%; /* Sets width to 72% */
+  margin: 0 auto; /* Centers horizontally */
+  border-radius: 50px; /* Adds border radius */
+  background-color: #fff; /* Sets background color */
+  overflow: hidden; /* Hides overflow */
+}
+.project .nav.nav-pills .nav-item {
+  width: 33.33333%; /* Sets width to one-third */
+}
+.project .nav.nav-pills .nav-link {
+  background-color: transparent; /* Sets background color to transparent */
+  border-radius: 0; /* Removes border radius */
+  padding: 17px 0; /* Adds padding */
+  color: #121212; /* Sets text color */
+  width: 100%; /* Sets width to 100% */
+  font-size: 17px; /* Sets font size */
+  letter-spacing: 0.8px; /* Adds letter spacing */
+  font-weight: 500; /* Sets font weight */
+  position: relative; /* Sets position to relative */
+  transition: 0.3s ease-in-out; /* Adds transition effect */
+  text-align: center; /* Centers text */
+  z-index: 0; /* Sets z-index to 0 */
+}
+.project .nav.nav-pills .nav-link::before {
+  content: ""; /* Clears content */
+  position: absolute; /* Sets position to absolute */
+  width: 0; /* Sets width to 0 */
+  height: 100%; /* Sets height to 100% */
+  background: #6c8ae3; /* Sets background color */
+  top: 0; /* Sets top to 0 */
+  left: 0; /* Sets left to 0 */
+  z-index: -1; /* Sets z-index to -1 */
+  transition: 0.3s ease-in-out; /* Adds transition effect */
+}
+.project .nav.nav-pills .nav-link.active::before {
+  width: 100% !important; /* Sets width to 100% when active */
+}
+.project .nav.nav-pills .nav-link.active {
+  border: 1px solid rgba(255, 255, 255, 1); /* Sets border */
+}
+.nav-link#projects-tabs-tab-first {
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Sets border */
+  border-radius: 55px 0px 0px 55px; /* Sets border radius */
+}
+.nav-link#projects-tabs-tab-second {
+  border-top: 1px solid rgba(255, 255, 255, 0.5); /* Sets top border */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* Sets bottom border */
+}
+.nav-link#projects-tabs-tab-third {
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Sets border */
+  border-radius: 0 55px 55px 0; /* Sets border radius */
+}
+.proj-imgbx {
+  position: relative; /* Sets position to relative */
+  border-radius: 30px; /* Adds border radius */
+  overflow: hidden; /* Hides overflow */
+  margin-bottom: 24px; /* Adds bottom margin */
+}
+.proj-imgbx::before {
+  content: ""; /* Clears content */
+  background: linear-gradient(90.21deg, #4280f4 -5.91%, #92b2f2 111.58%); /* Applies linear gradient background */
+  opacity: 0.85; /* Sets opacity */
+  position: absolute; /* Sets position to absolute */
+  width: 100%; /* Sets width to 100% */
+  height: 0; /* Sets height to 0 */
+  transition: 0.4s ease-in-out; /* Adds transition effect */
+}
+.proj-imgbx:hover::before {
+  height: 100%; /* Sets height to 100% on hover */
+}
+.proj-txtx {
+  position: absolute; /* Sets position to absolute */
+  text-align: center; /* Centers text */
+  top: 65%; /* Sets top position */
+  left: 50%; /* Sets left position */
+  transform: translate(-50%, -50%); /* Translates to center */
+  transition: 0.5s ease-in-out; /* Adds transition effect */
+  opacity: 0; /* Sets opacity to 0 */
+  width: 100%; /* Sets width to 100% */
+}
+.proj-imgbx:hover .proj-txtx {
+  top: 50%; /* Sets top position on hover */
+  opacity: 1; /* Sets opacity to 1 on hover */
+}
+.proj-txtx h4 {
+  font-size: 30px; /* Sets font size */
+  font-weight: 700; /* Sets font weight */
+  letter-spacing: 0.8px; /* Adds letter spacing */
+  line-height: 1.1em; /* Sets line height */
+}
+.proj-txtx span {
+  font-style: italic; /* Sets font style to italic */
+  font-weight: 400; /* Sets font weight */
+  font-size: 15px; /* Sets font size */
+  letter-spacing: 0.8px; /* Adds letter spacing */
+}
+
+/* Styles for the contact section */
+.contact {
+  background: linear-gradient(120.21deg, #6495ED -5.91%, #B0C4DE 111.58%); /* Applies linear gradient background */
+  padding: 60px 0 200px 0; /* Adds padding */
+}
+.contact img {
+  width: 92%; /* Sets width to 92% */
+}
+.contact h2 {
+  font-size: 45px; /* Sets font size */
+  font-weight: 700; /* Sets font weight */
+  margin-bottom: 30px; /* Adds bottom margin */
+}
+.contact form input, .contact form textarea {
+  width: 100%; /* Sets width to 100% */
+  background: rgba(255, 255, 255, 0.1); /* Sets background color with opacity */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Sets border with opacity */
+  border-radius: 20px; /* Adds border radius */
+  color: #fff; /* Sets text color */
+  margin: 0 0 8px 0; /* Adds margins */
+  padding: 18px 26px; /* Adds padding */
+  font-weight: 500; /* Sets font weight */
+  font-size: 18px; /* Sets font size */
+  letter-spacing: 0.8px; /* Adds letter spacing */
+  transition: 0.3s ease-in-out; /* Adds transition effect */
+}
+.contact form input:focus, .contact form textarea:focus {
+  background: rgba(255, 255, 255, 1); /* Sets background color with opacity */
+  color: #121212; /* Sets text color */
+}
+.contact form input::placeholder, .contact form textarea::placeholder {
+  font-size: 16px; /* Sets font size */
+  font-weight: 400; /* Sets font weight */
+  color: #fff; /* Sets text color */
+}
+.contact form input:focus::placeholder, .contact form textarea:focus::placeholder {
+  color: #121212; /* Sets text color */
+  opacity: 0.8; /* Sets opacity */
+}
+.contact form button {
+  font-weight: 700; /* Sets font weight */
+  color: #000; /* Sets text color */
+  background-color: #fff; /* Sets background color */
+  padding: 14px 48px; /* Adds padding */
+  font-size: 18px; /* Sets font size */
+  margin-top: 25px; /* Adds top margin */
+  border-radius: 0; /* Removes border radius */
+  position: relative; /* Sets position to relative */
+  transition: 0.3s ease-in-out; /* Adds transition effect */
+}
+.contact form button span {
+  z-index: 1; /* Sets z-index */
+  position: relative; /* Sets position to relative */
+}
+.contact form button:hover {
+  color: #fff; /* Sets text color on hover */
+}
+.contact form button::before {
+  content: ""; /* Clears content */
+  background: #121212; /* Sets background color */
+  width: 0; /* Sets width to 0 */
+  height: 100%; /* Sets height to 100% */
+  position: absolute; /* Sets position to absolute */
+  top: 0; /* Sets top to 0 */
+  left: 0; /* Sets left to 0 */
+  z-index: 0; /* Sets z-index */
+  transition: 0.3s ease-in-out; /* Adds transition effect */
+}
+.contact form button:hover::before {
+  width: 100%; /* Sets width to 100% on hover */
+}
+
+/* Styles for the footer section */
+.footer {
+  padding: 0 0 50px 0; /* Adds padding */
+  background-image: url('./assets/img/flowers.png'); /* Sets background image */
+  background-position: center center; /* Sets background position */
+  background-size: cover; /* Sets background size */
+  background-repeat: no-repeat; /* Prevents background from repeating */
+}
+.footer img {
+  width: 26%; /* Sets image width */
+}
+.footer .social-icon, p {
+  font-weight: 400; /* Sets font weight */
+  font-size: 14px; /* Sets font size */
+  color: #333333; /* Sets text color */
+  letter-spacing: 0.5px; /* Adds letter spacing */
+  margin-top: 20px; /* Adds top margin */
+}
+.click-like {
+  margin-left: -450px; /* Sets left margin */
+  margin-top: 0px; /* Sets top margin */
+  margin-bottom: 10px; /* Adds bottom margin */
+}
+.hand-thumbs-up {
+  margin-left: -450px; /* Sets left margin */
+}
+.hand-thumbs-up:hover {
+  cursor: pointer; /* Changes cursor to pointer on hover */
+}
+.hand-thumbs-up::before {
+  width: 42px; /* Sets width */
+  height: 42px; /* Sets height */
+  background-color: #5a8df3; /* Sets background color */
+  border-radius: 50%; /* Adds border radius */
+}
+
+/* Framework Default App.css */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
