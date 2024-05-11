@@ -541,6 +541,21 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
 }
 
+/* Dark Mode */
+.project .tab-pane[eventKey="second"] h3,
+.project .tab-pane[eventKey="third"] h3 {
+  color: #cccccc;
+}
+
+.project .tab-pane[eventKey="second"] p,
+.project .tab-pane[eventKey="third"] p {
+  color: #999999;
+}
+
+.project .tab-pane[eventKey="second"] li,
+.project .tab-pane[eventKey="third"] li {
+  color: #cccccc;
+}
 .contact {
   background: linear-gradient(120.21deg, #9b6104 -5.91%, #413f6d 111.58%);
   padding: 60px 0 200px 0;

@@ -75,51 +75,51 @@ export const Gallery = () => {
                                                 which are not defined in the provided code but are presumably imported from elsewhere. 
                                                 The alt attribute for each image is set to "Image", and the text content of the heading is a location name. */}
                                             <div className="item">
-                                                <img src={photo1} alt="Image" />
+                                                <img src={photo1} alt="Image in Hangzhou" />
                                                 <h5>Hangzhou, CN</h5>
                                             </div>
                                             <div className="item">
-                                                <img src={photo2} alt="Image" />
+                                                <img src={photo2} alt="Image in Wuhan" />
                                                 <h5>Wuhan, CN</h5>
                                             </div>
                                             <div className="item">
-                                                <img src={photo3} alt="Image" />
+                                                <img src={photo3} alt="Image in Hangzhou" />
                                                 <h5>Hangzhou, CN</h5>
                                             </div>
                                             <div className="item">
-                                                <img src={photo4} alt="Image" />
+                                                <img src={photo4} alt="Image in Los Angeles" />
                                                 <h5>Los Angeles, US</h5>
                                             </div>
                                             <div className="item">
-                                                <img src={photo5} alt="Image" />
+                                                <img src={photo5} alt="Image in Wenzhou" />
                                                 <h5>Wenzhou, CN</h5>
                                             </div>
                                             <div className="item">
-                                                <img src={photo6} alt="Image" />
+                                                <img src={photo6} alt="Image in Wenzhou" />
                                                 <h5>Wenzhou, CN</h5>
                                             </div>
                                             <div className="item">
-                                                <img src={photo7} alt="Image" />
+                                                <img src={photo7} alt="Image in Canberra" />
                                                 <h5>Canberra, AU</h5>
                                             </div>
                                             <div className="item">
-                                                <img src={photo8} alt="Image" />
+                                                <img src={photo8} alt="Image in Hangzhou" />
                                                 <h5>Hangzhou, CN</h5>
                                             </div>
                                             <div className="item">
-                                                <img src={photo9} alt="Image" />
+                                                <img src={photo9} alt="Image in Hangzhou" />
                                                 <h5>Hangzhou, CN</h5>
                                             </div>
                                             <div className="item">
-                                                <img src={photo10} alt="Image" />
+                                                <img src={photo10} alt="Image in Wenzhou" />
                                                 <h5>Wenzhou, CN</h5>
                                             </div>
                                             <div className="item">
-                                                <img src={photo11} alt="Image" />
+                                                <img src={photo11} alt="Image in Canberra" />
                                                 <h5>Canberra, AU</h5>
                                             </div>
                                             <div className="item">
-                                                <img src={photo12} alt="Image" />
+                                                <img src={photo12} alt="Image in San Diego" />
                                                 <h5>San Diego, US</h5>
                                             </div>
                                         </Carousel>

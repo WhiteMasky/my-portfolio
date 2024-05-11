@@ -73,8 +73,8 @@ export const Banner = ({ isDarkMode, toggleMode }) => {
               <div className={isVisible ? "animate__animated animate__bounceInDown" : "animate__animated animate__flipOutX"}>
                 <span className="tagline">你好! Hello! Привет!</span>
                 <h1>{`I'm Yichi, a`} <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Developer", "Student" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>I'm currently pursuing a Master of Computing at ANU with a passion for becoming a full-stack engineer. Eager to leverage my education and skills to contribute to innovative software solutions, I thrive on exploring new technologies and tackling complex challenges.</p>
-                  <button onClick={() => console.log('connect')}>Know more about me <ArrowDownCircle size={25} /> Scroll down </button>
+                  <p>I'm currently pursuing a Master of Computing at <abbr title='Australian National University'>ANU</abbr> with a passion for becoming a full-stack engineer. Eager to leverage my education and skills to contribute to innovative software solutions, I thrive on exploring new technologies and tackling complex challenges.</p>
+                  <button onClick={() => console.log('connect')}>Know more about me <ArrowDownCircle size={45} /> Scroll down </button>
               </div>}
               {/* The banner includes a greeting in multiple languages, an introduction that changes 
               between "I'm Yichi, a Developer" and "I'm Yichi, a Student", a brief bio, 
@@ -87,7 +87,6 @@ export const Banner = ({ isDarkMode, toggleMode }) => {
             <TrackVisibility offset={50}>
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__swing" : "animate__animated animate__flipOutX"}>
-                  {/* <img src={headerImg} alt="Header Img"/> */}
                   <img onClick={toggleMode} src={isDarkMode ? headerImgDark : headerImg} alt="Header Img"/>
                 </div>}
             </TrackVisibility>

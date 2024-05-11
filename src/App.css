@@ -116,7 +116,6 @@ input:focus, textarea:focus, select:focus {
 .enter_button {
   justify-content: center; /* Centers the content horizontally */
   align-items: center; /* Centers the content vertically */
-  margin-left: ; /* Sets the left margin */
   padding: 10px 20px; /* Sets the padding */
   font-size: 16px; /* Sets the font size to 16 pixels */
   background-color: #007bff; /* Sets the background color */
@@ -514,6 +513,87 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 }
 .project .nav.nav-pills .nav-link.active {
   border: 1px solid rgba(255, 255, 255, 1); /* Sets border */
+}
+/* Work Experience Pane */
+.project .tab-pane[eventKey="second"] ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.project .tab-pane[eventKey="second"] h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.project .tab-pane[eventKey="second"] p {
+  font-size: 16px;
+  color: var(--text-color-secondary);
+  margin-bottom: 10px;
+}
+
+.project .tab-pane[eventKey="second"] li {
+  font-size: 14px;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+/* Honors and Awards Pane */
+.project .tab-pane[eventKey="third"] ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.project .tab-pane[eventKey="third"] h3 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.project .tab-pane[eventKey="third"] p {
+  font-size: 16px;
+  color: var(--text-color-secondary);
+  margin-bottom: 10px;
+}
+
+.project .tab-pane[eventKey="third"] li {
+  font-size: 14px;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+/* Light Mode */
+.project .tab-pane[eventKey="second"] h3,
+.project .tab-pane[eventKey="third"] h3 {
+  color: #333333;
+}
+
+.project .tab-pane[eventKey="second"] p,
+.project .tab-pane[eventKey="third"] p {
+  color: #666666;
+}
+
+.project .tab-pane[eventKey="second"] li,
+.project .tab-pane[eventKey="third"] li {
+  color: #333333;
+}
+
+/* Dark Mode */
+.dark-mode .project .tab-pane[eventKey="second"] h3,
+.dark-mode .project .tab-pane[eventKey="third"] h3 {
+  color: #cccccc;
+}
+
+.dark-mode .project .tab-pane[eventKey="second"] p,
+.dark-mode .project .tab-pane[eventKey="third"] p {
+  color: #999999;
+}
+
+.dark-mode .project .tab-pane[eventKey="second"] li,
+.dark-mode .project .tab-pane[eventKey="third"] li {
+  color: #cccccc;
 }
 .nav-link#projects-tabs-tab-first {
   border: 1px solid rgba(255, 255, 255, 0.5); /* Sets border */

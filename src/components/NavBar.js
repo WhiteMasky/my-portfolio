@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react"; 
-import { Navbar, Nav, Container } from "react-bootstrap"; 
-import { Map, Compass } from 'react-bootstrap-icons'; 
-import navIconLinkedIn from '../assets/img/nav-icon-linkedin.svg'; 
-import navIconGithub from '../assets/img/nav-icon-github.svg'; 
-import navIconYoutube from '../assets/img/nav-icon-youtube.svg'; 
-import navIconFacebook from '../assets/img/nav-icon-facebook.svg'; 
-import { HashLink } from 'react-router-hash-link'; 
-import { BrowserRouter as Router } from "react-router-dom"; 
+import { useState, useEffect } from "react";
+import { Navbar, Nav, Container } from "react-bootstrap";
+import { Map, Compass } from 'react-bootstrap-icons';
+import navIconLinkedIn from '../assets/img/nav-icon-linkedin.svg';
+import navIconGithub from '../assets/img/nav-icon-github.svg';
+import navIconYoutube from '../assets/img/nav-icon-youtube.svg';
+import navIconFacebook from '../assets/img/nav-icon-facebook.svg';
+import { HashLink } from 'react-router-hash-link';
+import { BrowserRouter as Router } from "react-router-dom";
 
 export const NavBar = ({ isDarkMode, toggleMode }) => {
   const [activeLink, setActiveLink] = useState('home'); // Creating a state variable for the active link
@@ -32,11 +32,11 @@ export const NavBar = ({ isDarkMode, toggleMode }) => {
 
   return (
     <Router>
-      <Navbar expand="md" className={scrolled ? "scrolled" : ""}> 
-      {/* Creating a responsive navigation bar component */}
+      <Navbar expand="md" className={scrolled ? "scrolled" : ""} role="navigation">
+        {/* Creating a responsive navigation bar component */}
         <Container>
           <Navbar.Brand href="./sitemap.html">
-            <Compass size={50} className={`map-icon ${isDarkMode ? 'map-icon-dark' : 'map-icon-light'}`}/> 
+            <Compass size={50} className={`map-icon ${isDarkMode ? 'map-icon-dark' : 'map-icon-light'}`} alt="Compass Icon" />
             {/* Displaying a compass icon with dynamic styling based on dark mode */}
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
@@ -44,21 +44,25 @@ export const NavBar = ({ isDarkMode, toggleMode }) => {
           </Navbar.Toggle>
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link> 
-              <Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About</Nav.Link> 
-              <Nav.Link href="#gallery" className={activeLink === 'gallery' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('gallery')}>Gallery</Nav.Link> 
-              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link> 
+              <Nav.Link href="#home" className={activeLink === 'home' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('home')}>Home</Nav.Link>
+              <Nav.Link href="#about" className={activeLink === 'about' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('about')}>About</Nav.Link>
+              <Nav.Link href="#gallery" className={activeLink === 'gallery' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('gallery')}>Gallery</Nav.Link>
+              <Nav.Link href="#projects" className={activeLink === 'projects' ? 'active navbar-link' : 'navbar-link'} onClick={() => onUpdateActiveLink('projects')}>Projects</Nav.Link>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href="https://www.linkedin.com/in/yichizhang54"><img src={navIconLinkedIn} alt="" /></a> 
-                <a href="https://github.com/WhiteMasky"><img src={navIconGithub} alt="" /></a> 
-                <a href="https://www.youtube.com/channel/UC5jq2ipvNFnFPE2v_zbdZBw"><img src={navIconYoutube} alt="" /></a> 
-                <a href="https://www.facebook.com/YichiZhang0504"><img src={navIconFacebook} alt="" /></a> 
+                <a href="https://www.linkedin.com/in/yichizhang54" aria-label="LinkedIn profile"><img src={navIconLinkedIn} alt="LinkedIn Icon" /></a>
+                <a href="https://github.com/WhiteMasky" aria-label="GitHub profile"><img src={navIconGithub} alt="GitHub Icon" /></a>
+                <a href="https://www.youtube.com/channel/UC5jjq2ipvNFnFPE2v_zbdZBw" aria-label="YouTube channel"><img src={navIconYoutube} alt="YouTube Icon" /></a>
+                <a href="https://www.facebook.com/YichiZhang0504" aria-label="Facebook profile"><img src={navIconFacebook} alt="Facebook Icon" /></a>
               </div>
-              <button className="vvd" onClick={toggleMode}>{isDarkMode ? 'Light' : 'Dark'}</button> 
+              <button className="vvd" onClick={toggleMode} aria-label={`Switch to ${isDarkMode ? 'light' : 'dark'} mode`}>
+                {isDarkMode ? 'Light' : 'Dark'}
+              </button>
               <a href="./feedback.html">
-                <button className="vvd"><span>Feedback</span></button> 
+                <button className="vvd" aria-label="Leave feedback">
+                  <span>Feedback</span>
+                </button>
               </a>
             </span>
           </Navbar.Collapse>

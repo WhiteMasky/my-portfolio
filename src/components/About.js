@@ -35,7 +35,7 @@ export const About = () => {
                     Switching my academic focus to computer science has been one of the boldest and most correct decisions I have made. I thoroughly enjoy coding, and problem-solving always excites me. <br />
                     Apart from my studies, I have other interests, such as calligraphy, a traditional Chinese handwriting art that I have been practicing for over fifteen years. Since coming to Australia, I have also developed a love for sports. I now go to the gym four to five times a week, and at the same time, I have learned sports like frisbee and tennis.
                   </p>
-                  <button ><ChatRightQuote size={25} className="about-icon" /><p><strong> About Me </strong></p></button>
+                  <button ><ChatRightQuote size={45} className="about-icon" /><p><strong> About Me </strong></p></button>
                   {/* Each div contains a paragraph of text and a button. 
                   The text in the first column is a personal introduction, 
                   and the text in the second column is a mission statement. 
@@ -57,7 +57,7 @@ export const About = () => {
                     - 1. Clearly present me and my related work<br />
                     - 2. Can be used as an electronic resume for job hunting<br />
                     - 3. Try to make it impressive</p>
-                  <button ><ChatLeftText size={25} className="about-icon" /><p><strong> Mission Statement </strong></p></button>
+                  <button ><ChatLeftText size={45} className="about-icon" /><p><strong> Mission Statement </strong></p></button>
                 </div>
               }
             </TrackVisibility>
