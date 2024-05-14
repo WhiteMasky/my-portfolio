@@ -30,8 +30,8 @@ export const About = () => {
                   Inside TrackVisibility, a function is used as a child. 
                   This function takes the isVisible prop as an argument, 
                   and returns a div that uses this prop to apply different classes.  */}
-                  <p> Hello, this is <strong>Yichi Zhang</strong>, and I am currently pursuing a master's degree in computer science at the ANU. I am originally from China, where I spent the first 23 years of my life and earned my undergraduate degree. <br />
-                    An interesting fact is that my undergraduate degree is unrelated to the STEM field; in fact, I majored in Russian literature. This is also why I can speak Chinese, English, and Russian.<br />
+                  <p> Hello, this is <strong>Yichi Zhang</strong>, and I am currently pursuing a master's degree in computer science at the <abbr title='Australian National University'>ANU</abbr>. I am originally from China, where I spent the first 23 years of my life and earned my undergraduate degree. <br />
+                    An interesting fact is that my undergraduate degree is unrelated to the <abbr title="Science, technology, engineering, and mathematics">STEM</abbr> field; in fact, I majored in Russian literature. This is also why I can speak Chinese, English, and Russian.<br />
                     Switching my academic focus to computer science has been one of the boldest and most correct decisions I have made. I thoroughly enjoy coding, and problem-solving always excites me. <br />
                     Apart from my studies, I have other interests, such as calligraphy, a traditional Chinese handwriting art that I have been practicing for over fifteen years. Since coming to Australia, I have also developed a love for sports. I now go to the gym four to five times a week, and at the same time, I have learned sports like frisbee and tennis.
                   </p>

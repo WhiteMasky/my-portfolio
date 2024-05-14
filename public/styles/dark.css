@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Great Vibes';
+  src: url('GreatVibes-Regular.ttf') format('truetype'),
+       url('GreatVibes-Regular.woff') format('woff'),
+       url('GreatVibes-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* Applies margin and padding reset to all elements */
 * {
   margin: 0; /* Sets the margin to 0 for all elements */
@@ -18,7 +27,7 @@ body {
   position: relative; /* Sets the positioning context to relative */
   background-color: #000 !important; /* Sets the background color to black with important priority */
   color: #cccccc !important; /* Sets the text color to #cccccc with important priority */
-  font-family: 'Centra', sans-serif !important; /* Sets the font family to 'Centra' with important priority */
+  font-family: 'Great Vibes', cursive !important; /* Sets the font family to 'Centra' with important priority */
 }
 
 /* Applies margin and padding reset to heading elements */
@@ -76,7 +85,6 @@ input:focus, textarea:focus, select:focus {
 
 /* Styles for the "enter_container" class */
 .enter_container {
-  background-image: url('../images/flowers.png'); /* Sets the background image */
   background-size: cover; /* Scales the background image to cover the entire container */
   background-position: center; /* Positions the background image at the center */
   display: flex; /* Sets the display property to flex */
@@ -312,7 +320,8 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .banner {
   margin-top: 0; /* Sets the top margin to 0 */
   padding: 260px 0 100px 0; /* Sets the padding to 260px on top, 0 on right/left, and 100px on bottom */
-  background-image: url('./assets/img/flowers_inverted.png'); /* Sets the background image */
+  background-color: #000; /* Sets the background color to black */
+  background-image: none; /* Sets the background image */
   background-position: top center; /* Positions the background image at the top center */
   background-size: cover; /* Scales the background image to cover the entire container */
   background-repeat: no-repeat; /* Prevents the background image from repeating */
@@ -736,7 +745,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 /* Styles for the footer section */
 .footer {
   padding: 0 0 50px 0; /* Set the padding */
-  background-image: url('./assets/img/flowers_inverted.png'); /* Set the background image */
+  background-image: none; /* Set the background image */
   background-position: center center; /* Set the background position to center */
   background-size: cover; /* Set the background size to cover */
   background-repeat: no-repeat; /* Prevent the background from repeating */
